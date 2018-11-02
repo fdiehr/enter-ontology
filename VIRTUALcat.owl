@@ -1,18 +1,9 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <rdf:RDF xmlns="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#"
      xml:base="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65">
@@ -20,6 +11,399 @@
 
 CC BY 4.0 International License Franziska Diehr</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#produced -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#produced">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalTransformation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#usedConcept -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#usedConcept">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#VirtualApp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#EducationalConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#usedSoftware -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#usedSoftware">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#uses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Animation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#wasDevelopedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#wasDevelopedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#VirtualApp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#wasPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#wasPerformedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#wasUsedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#wasUsedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#MuseumObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#actorName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#actorName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Actor"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>.hapto</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Cristina Navarro</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Senckenberg Museum für Naturkunde Görlitz</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#description">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#device -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#device">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#VirtualApp"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>HTC Vive</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Holo Lens</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>iPad</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>smartphone</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#digitalObjectType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#digitalObjectType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>2D scan</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>3D model</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>3D scan</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>digital photo</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#educationalGoal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#educationalGoal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#EducationalConcept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#hardware -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#hardware">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#hasView -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#hasView">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#method -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#method">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalTransformation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>2D scanning</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>3D scanning</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>digital modelling</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>photogrammerty</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#softwareTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#softwareTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Software"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>3D F Zephyr Free</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Cinema 4D</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Reality Capture</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Unity 3D</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#targetGroup -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#targetGroup">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#EducationalConcept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#version">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Software"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>2.0.4</rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>hier aber mal software citation von stephan druskat raussuchen!</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -43,8 +427,14 @@ CC BY 4.0 International License Franziska Diehr</rdfs:comment>
     <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Animation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Animation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Process"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
     
 
 
@@ -54,19 +444,23 @@ CC BY 4.0 International License Franziska Diehr</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Digitisation -->
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalTransformation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Digitisation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Process"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalTransformation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Modelling -->
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#EducationalConcept -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Modelling">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Process"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#EducationalConcept"/>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Event"/>
     
 
 
@@ -82,9 +476,17 @@ CC BY 4.0 International License Franziska Diehr</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Process -->
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Scanning -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Process"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Scanning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalTransformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Software"/>
     
 
 
@@ -97,9 +499,17 @@ CC BY 4.0 International License Franziska Diehr</rdfs:comment>
     <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#VirtualApp -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#VirtualApp"/>
+    
+
+
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#3DModelling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#3DModelling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalTransformation"/>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
