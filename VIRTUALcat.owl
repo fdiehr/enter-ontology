@@ -488,6 +488,15 @@ CC BY 4.0 International License Franziska Diehr</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#softwareIsDocumentedIn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#softwareIsDocumentedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#softwareTitle -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#softwareTitle">
@@ -608,6 +617,7 @@ CC BY 4.0 International License Franziska Diehr</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DigitalTransformation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#DevelopmentProcess"/>
+        <rdfs:comment xml:lang="en">not quite right: 3D Modelling is not Transformation can be born digital</rdfs:comment>
     </owl:Class>
     
 
@@ -626,7 +636,9 @@ CC BY 4.0 International License Franziska Diehr</rdfs:comment>
 
     <!-- http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#MuseumObject -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#MuseumObject"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#MuseumObject">
+        <rdfs:comment xml:lang="en">MuseumObject: also immaterial cultural heritage: maybe information object is the better word? or cultral heritage entity ! no, not good, because of SMNG Objects they are cultural heritage. maybe something from CHARM?</rdfs:comment>
+    </owl:Class>
     
 
 
