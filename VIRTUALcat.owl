@@ -173,11 +173,11 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
-    <!-- http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by -->
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P2_has_type -->
 
-    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by">
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
     </owl:ObjectProperty>
     
 
@@ -266,18 +266,6 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/dependsOn -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/dependsOn">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationActivity"/>
-        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
-        <rdfs:comment xml:lang="de">1.9 Softwareabhängigkeit. Von welche Software ist der Betrieb der Anwendung abhängig? z.B. Game Engine, Firefox Version 60., Java 8 etc.
-Mehrfachnennung möglich</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasCreatedDigitalObject -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasCreatedDigitalObject">
@@ -297,6 +285,18 @@ Mehrfachnennung möglich</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
         <rdfs:comment>4.1 Gesamtentwicklungszeitraum. Wie lang hat die Entwicklung der Anwendung insgesamt gedauert? z.B. März 2018 bis Dezember 2018</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasEducationFormat -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasEducationFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+        <rdfs:comment>1.5 Vermittlungsformat. Benennung des Formats der Vermittlungsanwendung. Dies ist losgelöst von der Technik zu betrachten. Das Format könnte in unterschiedlichen Technologien oder auch analog umgesetzt werden z.B. Spiel,  Chat-Bot/Messenger, Guide, immersive Tour, Parcours, Dialogplattform, Messenger, Guide-/Leitsystem  etc. 
+Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -335,6 +335,16 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasMaturityLevel -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasMaturityLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasMember -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasMember">
@@ -368,6 +378,16 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasOperationConcept -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasOperationConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasResearchTimeSpan -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasResearchTimeSpan">
@@ -379,6 +399,37 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasTargetAudience -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasTargetAudience">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasTechnologyType -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasTechnologyType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasUserGeneratedContentType -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasUserGeneratedContentType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+        <rdfs:comment>2.10 Können Nutzer eigene Inhalte in die Anwendung einspielen? Wenn ja, um welche Art von Content handelt es sich? (Fotos, Videos, Metadaten: Standorte/geografische Daten, thematisches/kontextuelles/biografisches Wissen/Erlebnis)?
+Mehrfachnennung möglich!</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/isAboutMuseumObject -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isAboutMuseumObject">
@@ -386,39 +437,6 @@ Mehrfachnennung möglich</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
         <rdfs:comment>3.2 Weist die Anwendung einen konkreten Bezug zu einem (Sammlungs-)Objekt (auch Lebewesen) auf? z.B. Gemälde &quot;Der Kaufmann Georg Giese&quot; von Hans Hohlbein, Lunar Rover Apollo 17, Sulzer Dampfmaschine, Springschwanz etc.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/isTitleOfDigitalApp -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isTitleOfDigitalApp">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
-        <rdfs:comment xml:lang="de">1.1 Bezeichnung der Anwendung. Offizielle Bezeichnung der digitalen Anwendung (bzw. wenn nicht vorhanden den Arbeitstitel). Hier bitte alle bisherigen sowie geplanten Anwendungen aufführen.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/isTitleOfProject -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isTitleOfProject">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Project"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
-        <rdfs:comment xml:lang="de">1.2. Bezeichnung des Drittmittelprojekts. Bei allen gleich: museum4punkt0</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/isTitleOfSubProject -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isTitleOfSubProject">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/SubProject"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
-        <rdfs:comment xml:lang="de">1.3 Bezeichnung des Teilprojekts.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -493,36 +511,36 @@ z.B. Probanden-Testing, Online Nutzerumfrage, Besucherbeobachtung, Besucherbefra
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/usesOperationSystem -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/usesHardware -->
 
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usesOperationSystem">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationActivity"/>
-        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
-        <rdfs:comment xml:lang="de">1.8 Betriebssystem. Welches Betriebssystem erfordert die Anwendung? z.B. Windows 10, Android (ab 8.0), iOS, Plattform unabhängig
-Mehrfachnennung möglich!</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/usesPeripheralDevices -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usesPeripheralDevices">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationActivity"/>
-        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usesHardware">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
         <rdfs:comment xml:lang="de">1.7.1 periphere Geräte/Hardware. Welche Geräte/Hardware sind für den Betrieb der Anwendung weiter nötig? z.B. PC (Monitor wäre nur das Abspielgerät, aber man benötigt einen Rechner, um die Anwendung auszuführen), RaspberryPi, Projektor,</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/usesPlaybackDevice -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/usesOutputDevice -->
 
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usesPlaybackDevice">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationActivity"/>
-        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usesOutputDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice"/>
         <rdfs:comment>1.7 Abspielgeräte. Auf welchen Abspielgeräten ist die Technologie implementiert bzw. auf welchen Geräten kann sie implementiert werden? z.B. VR-Brille (wenn nötig auch konkretes Modell benennen!), Simulator, Projektionskuppel, Monitor etc.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/usesSoftware -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usesSoftware">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
+        <rdfs:comment xml:lang="de">1.8 Software/betreibssystem. Von welche Software ist der Betrieb der Anwendung abhängig? z.B. Game Engine, Firefox Version 60., Java 8 etc.
+Mehrfachnennung möglich</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -605,10 +623,16 @@ Mehrfachnennung möglich!</rdfs:comment>
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/rights">
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -634,7 +658,6 @@ Mehrfachnennung möglich!</rdfs:comment>
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -666,9 +689,18 @@ Mehrfachnennung möglich!</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/license">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="de">Hiermit direkt zu CC verlinken für Logo etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
 
@@ -876,13 +908,7 @@ Je Methode aus 4.3 max. 200 Zeichen Beschreibung,</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:domain rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="de">1.7.2 Mindestanforderungen (Abspiel-)Geräte/Hardware. Welche Mindestanforderungen bestehen an die Hardware? 
-Beispiel:
-
-    Prozessor: Intel® Core™ i5 (5. Generation) 2x 1.80 GHz
-    Arbeitsspeicher RAM: 8 GB RAM
-    Festplatte: 1000 GB Festplatte / 256 GB SSD Festplatte
-    Grafikkarte: AMD/ATI Radeon R5 /Intel HD Graphics 620</rdfs:comment>
+        <rdfs:comment xml:lang="de"></rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -905,6 +931,17 @@ Beispiel:
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">2.6.1 Beschreibung des Bedürfnisses/Problems. Das in 2.6 benannte Problem/Bedürfnis genauer beschreiben: Wie reagiert die Anwendung auf das Bedürfnis/Problem?  (je Schlagwort max. 200 Zeichen)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>1.1 Bezeichnung der Anwendung. Offizielle Bezeichnung der digitalen Anwendung (bzw. wenn nicht vorhanden den Arbeitstitel). Hier bitte alle bisherigen sowie geplanten Anwendungen aufführen.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -942,29 +979,6 @@ Beispiel:
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/educationalFormat -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/educationalFormat">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="de">1.5 Vermittlungsformat. Benennung des Formats der Vermittlungsanwendung. Dies ist losgelöst von der Technik zu betrachten. Das Format könnte in unterschiedlichen Technologien oder auch analog umgesetzt werden z.B. Spiel,  Chat-Bot/Messenger, Guide, immersive Tour, Parcours, Dialogplattform, Messenger, Guide-/Leitsystem  etc. 
-Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/educationalGoal -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/educationalGoal">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="de">2.1 Vermittlungsziel(e). Was sind die Vermittlungs-, Kommunikations- und/oder Erkenntnisziele?  Stichwortartige Nennung des Ziels</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/educationalStrategy -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/educationalStrategy">
@@ -989,13 +1003,13 @@ Angabe in Minuten! z.B. 8 Min.</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/maturityLevel -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/modelNr -->
 
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/maturityLevel">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/modelNr">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="de">1.10 Reifegrad der Anwendung. Welchen Reifegrad hat die Anwendung? z.B.: high fidelity Prototyp, Paper Prototyp, abgeschlossenes Produkt, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Modelnummer des Geräts</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1028,13 +1042,24 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/permanentNeedOfInternetAccess -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/needsPermanentInternetAccess -->
 
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/permanentNeedOfInternetAccess">
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationActivity"/>
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/needsPermanentInternetAccess">
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="de">1.7.3 Internetzugang: Wird ein dauerhafter Internetzugang benötigt um die Anwendung zu betreiben? ja/nein 
+        <rdfs:comment xml:lang="de">1.6.3 Internetzugang: Wird ein dauerhafter Internetzugang benötigt um die Anwendung zu betreiben? ja/nein 
 Es gibt auch Anwendungen, die punktuell Internetzugang benötigen, z.B. zum Download der App oder zum Bespielen der Station. Mit &quot;dauerhaftem Internetzugang&quot; sind also nur solche Anwendungen gemient, die für ihren Betrieb permanent einen Internetzugang benötigen.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/projectTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/projectTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">1.2. Bezeichnung des Drittmittelprojekts. Bei allen gleich: museum4punkt0</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1046,6 +1071,56 @@ Es gibt auch Anwendungen, die punktuell Internetzugang benötigen, z.B. zum Down
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="de">3.5 Welchen disziplinären Bezug weist der Inhalt auf? Bitte Schlagworte angeben z.B. Naturkunde, Technikgeschichte, Kunstgeschichte, Ethnologie</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/requiredGraphicsCard -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/requiredGraphicsCard">
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/requiredHardDriveSpace -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/requiredHardDriveSpace">
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/requiredProcessor -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/requiredProcessor">
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">1.7.2 Mindestanforderungen (Abspiel-)Geräte/Hardware. Welche Mindestanforderungen bestehen an die Hardware? 
+Beispiel:
+
+    Prozessor: Intel® Core™ i5 (5. Generation) 2x 1.80 GHz
+    Arbeitsspeicher RAM: 8 GB RAM
+    Festplatte: 1000 GB Festplatte / 256 GB SSD Festplatte
+    Grafikkarte: AMD/ATI Radeon R5 /Intel HD Graphics 620</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/requiredRAM -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/requiredRAM">
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">1.7.2 Mindestanforderungen (Abspiel-)Geräte/Hardware. Welche Mindestanforderungen bestehen an die Hardware? 
+Beispiel:
+
+    Prozessor: Intel® Core™ i5 (5. Generation) 2x 1.80 GHz
+    Arbeitsspeicher RAM: 8 GB RAM
+    Festplatte: 1000 GB Festplatte / 256 GB SSD Festplatte
+    Grafikkarte: AMD/ATI Radeon R5 /Intel HD Graphics 620</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1174,132 +1249,23 @@ Es gibt auch Anwendungen, die punktuell Internetzugang benötigen, z.B. zum Down
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/subjectOfEducation -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/subprojectTitle -->
 
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/subjectOfEducation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Immersion</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Narration und Stoytelling</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Objektkontextualisierung</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Partizipation und Citizen Science</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Spielbasierte Interaktion</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:comment xml:lang="de">2.3 Gegenstand der Vermittlung</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/subprojectTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/SubProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">1.3 Bezeichnung des Teilprojekts.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/technology -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/toolTitle -->
 
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/technology">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Augmentation</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Guidesystem</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Native App</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Virtual Reality</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Web Application</rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment>1.6 Technologie. Welche Technologie(n) nutzt das Format? Bitte eine der Kategorien wählen oder eine weitere hinzufügen:
-
-    Augmentation
-    Virtual Reality
-    Webtechnologien
-    Native App
-    ...</rdfs:comment>
-        <rdfs:comment xml:lang="de">anyURI damit auf WIidata verlinken kann</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/toolTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1316,25 +1282,13 @@ Mehrfachnennung möglich!</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/userGeneratedContentType -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/version -->
 
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/userGeneratedContentType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>2.10 Können Nutzer eigene Inhalte in die Anwendung einspielen? Wenn ja, um welche Art von Content handelt es sich? (Fotos, Videos, Metadaten: Standorte/geografische Daten, thematisches/kontextuelles/biografisches Wissen/Erlebnis)?
-Mehrfachnennung möglich!</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/versionOrModelNr -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/versionOrModelNr">
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/version">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
-        <rdfs:domain rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Softwareversion oder Modellnummer des Geräts</rdfs:comment>
+        <rdfs:comment>Softwareversion</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1493,12 +1447,6 @@ Rückkehr in den Alltag
     <!-- http://www.cidoc-crm.org/cidoc-crm/E39_Actor -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
-    
-
-
-    <!-- http://www.cidoc-crm.org/cidoc-crm/E41_Appellation -->
-
-    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
     
 
 
@@ -1702,10 +1650,130 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Adolescent -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Adolescent">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Adults -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Adults">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Age -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Age">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/TargetAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Android -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Android">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Audio -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Audio">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Augmentation -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Augmentation">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Beobachtung -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Beobachtung">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Biography -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Biography">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Children -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Children">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Chrome -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Chrome">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Webbrowser"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Clickdummy -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Clickdummy">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/LowFidelityPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Computer -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Computer">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/ContentType -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ContentType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/CreationMethod -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Design -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Design">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
     </owl:Class>
     
 
@@ -1726,10 +1794,238 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Digitalfotografie -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Digitalfotografie">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Digitalisierung"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Digitalisierung -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Digitalisierung">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/EducationFormat -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Enthusiast -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Enthusiast">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Interest"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Evaluierung -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Evaluierung">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
+        <rdfs:comment>Evaluierung/Bewertung nach Kriterien</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/ExperimentOderVersuch -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ExperimentOderVersuch">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Film -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Film">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Firefox -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Firefox">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Webbrowser"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Fragebogen -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Fragebogen">
+        <rdfs:subClassOf rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Guidesystem -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Guidesystem">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Handreichung -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Handreichung">
+        <rdfs:subClassOf rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Hardware -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Hardware">
+        <rdfs:subClassOf rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/HeadMountedDisplay -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/HeadMountedDisplay">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice"/>
+        <rdfs:comment>A head-mounted display (or helmet-mounted display, for aviation applications), both abbreviated HMD, is a display device, worn on the head or as part of a helmet, that has a small display optic in front of one (monocular HMD) or each eye (binocular HMD). A HMD has many uses, including in gaming, aviation, engineering, and medicine lift.[1] A head-mounted display is the primary component of virtual reality headsets. There is also an optical head-mounted display (OHMD), which is a wearable display that can reflect projected images and allows a user to see through it.[2]
+https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/HighFidelityPrototype -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/HighFidelityPrototype">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/HoloLens -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/HoloLens">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/HeadMountedDisplay"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/ImmersivesFormat -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ImmersivesFormat">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Interest -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Interest">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/TargetAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/InterviewBefragungQualitativ -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/InterviewBefragungQualitativ">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/InterviewBefragungQuantitativ -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/InterviewBefragungQuantitativ">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Java -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Java">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/KreativWorkshop -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/KreativWorkshop">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Linux -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Linux">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Location -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Location">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/LowFidelityPrototype -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/LowFidelityPrototype">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/MacOSX -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MacOSX">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Materialrecherche -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Materialrecherche">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="de">1.10 Reifegrad der Anwendung. Welchen Reifegrad hat die Anwendung? z.B.: high fidelity Prototyp, Paper Prototyp, abgeschlossenes Produkt, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Mockup -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Mockup">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
     </owl:Class>
     
 
@@ -1752,11 +2048,68 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/OperationActivity -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/NarrativesFormat -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OperationActivity">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
-        <rdfs:comment>Betrieb der Anwendung</rdfs:comment>
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/NarrativesFormat">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/NativeApp -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/NativeApp">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/OutputDevice -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
+        <rdfs:comment>An output device is any piece of computer hardware equipment which converts information into human-readable form.
+https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/PartizipativesFormat -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/PartizipativesFormat">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Photo -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Photo">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Photogrammetrie -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Photogrammetrie">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Digitalisierung"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Programming -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Programming">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
     </owl:Class>
     
 
@@ -1765,6 +2118,14 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Project">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Prototyping -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Prototyping">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
     </owl:Class>
     
 
@@ -1785,11 +2146,188 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Safari -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Safari">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Webbrowser"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Software -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Software">
+        <rdfs:subClassOf rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/SpecimenDescription -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SpecimenDescription">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/SpielerischesFormat -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SpielerischesFormat">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Streifenlichtscan -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Streifenlichtscan">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Digitalisierung"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/SubProject -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SubProject">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
         <rdfs:comment xml:lang="de">museum4punkt0-Teilprojekt</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/TargetAudience -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/TargetAudience">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment>weiter ausführen. Mit Silvia und Silke besprechen</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Technology -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Technology">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Text -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Text">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/VRBrille -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/VRBrille">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/HeadMountedDisplay"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Video -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Video">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/VirtualReality -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/VirtualReality">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Webanwendung -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Webanwendung">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Webbrowser -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Webbrowser">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Windows -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Windows">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Windows10Mobile -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Windows10Mobile">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Wireframe -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Wireframe">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/LowFidelityPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/YoungAdults -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/YoungAdults">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/iOS -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/iOS">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/mobileDevice -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/mobileDevice">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/stationaryDevice -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/stationaryDevice">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/3DModellierung -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/3DModellierung">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/360GradFilm -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/360GradFilm">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Film"/>
     </owl:Class>
     
 
