@@ -1,0 +1,105 @@
+
+      <semantic-form new-subject-template='https://www.museum4punkt0.de/catalogue/ontology/{{UUID}}'
+        post-action='redirect'
+        browser-persistence=true
+        form-id='DigitalApp1'
+        fields='[
+          {
+            "id" : "digitalAppTitle",
+          "label" : "Name der Digitalen Anwendung",
+          "minOccurs" : "1",
+          "xsdDatatype" : "http://www.w3.org/2001/XMLSchema#string",
+          "domain" : [ "https://www.museum4punkt0.de/catalogue/ontology/DigitalApp" ],
+          "description" : "This is a test",
+          "defaultValues" : [ ],
+          "range" : [ ],
+          "maxOccurs" : "1",
+          "order" : "1",
+          "insertPattern" : 
+            "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+           INSERT {$subject m4p0:digitalAppTitle $value} WHERE {}"
+          },
+          
+          {
+            "id": "addressedUserNeeds",
+            "label": "adressierte Benutzerbedürfnisse",
+            "description": "täst",
+            "xsdDatatype": "xsd:string",
+            "minOccurs": "1",
+            "maxOccurs": "unbound",            
+            "insertPattern" : "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+                  INSERT {$subject m4p0:addressedUserNeeds $value} WHERE {}"
+          },
+          {
+            "id" : "educationalStrategy",
+            "label" : "Vermittlungsstrategie",
+            "minOccurs" : "0",
+            "xsdDatatype" : "http://www.w3.org/2001/XMLSchema#string",
+            "domain" : [ "https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept" ],
+            "description" : "Welche Strategie/welches Konzept liegt der Vermittlung zugrunde? Beschreibung min. 1500, max. 3000 Zeichen",
+            "defaultValues" : [ ],
+            "range" : [ ],
+            "maxOccurs" : "1",
+            "order" : "2",
+            "insertPattern" : 
+              "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+             INSERT {$subject m4p0:educationalStrategy $value} WHERE {}"
+            } ,
+
+            {
+                "id": "EducationFormat",
+                "label": "Vermittlungsformat",
+                "description": "The type of the created instance",
+                "xsdDatatype": "xsd:anyURI",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "valueSetPattern": "
+                  SELECT $value $label WHERE {
+                    VALUES ($value $label) {
+                      (<https://www.museum4punkt0.de/catalogue/ontology/ImmersivesFormat> \"Immersives Format\")
+                      (<https://www.museum4punkt0.de/catalogue/ontology/NarrativesFormat> \"Narratives Format\")
+                      (<https://www.museum4punkt0.de/catalogue/ontology/PartizipativesFormat> \"Partizipatives Format\")
+                      (<https://www.museum4punkt0.de/catalogue/ontology/SpielerischesFormat> \"Spielerisches Format\")
+                      
+                    }
+                  }
+                ",
+                "selectPattern": "SELECT $value WHERE { $subject a $value }",
+                "insertPattern": "INSERT { $subject a $value } WHERE {}",
+                "deletePattern": "DELETE { $subject a $value } WHERE {}"
+              }
+        ]'>
+        <bs-panel>
+          <h4>Neue digitale Viermittlungsanwendung </h4>
+          <semantic-form-recover-notification></semantic-form-recover-notification>
+          <bs-tabs fixed-key="form">
+            <bs-tab event-key="1" title="Digitale Anwendung">
+              <semantic-form-text-input for='digitalAppTitle'></semantic-form-text-input>
+              <semantic-form-select-input for='EducationFormat'></semantic-form-select-input>
+              
+            </bs-tab>
+            <bs-tab event-key="2" title="Vermittlungskonzept">
+              
+              <semantic-form-text-input for="addressedUserNeeds"></semantic-form-text-input>
+              <semantic-form-text-input for="educationalStrategy"></semantic-form-text-input>
+              <!--
+              <semantic-form-select-input for='acquisitionType'></semantic-form-select-input>
+              <semantic-form-autocomplete-input for='acquisitionFromActor' placeholder='Search for an actor. Type e.g. "British"'></semantic-form-autocomplete-input>
+              -->
+            </bs-tab>
+            <bs-tab event-key="3" title="Entwicklung">
+
+            </bs-tab>
+            <bs-tab event-key="4" title="Untersuchung">
+
+            </bs-tab>
+            <bs-tab event-key="5" title="Objekte">
+
+            </bs-tab>
+          </bs-tabs>
+          <semantic-form-errors></semantic-form-errors>
+          <!-- save and reset button for form -->
+          <button name="submit" class="btn btn-default">Save</button>
+          <button name="reset" class="btn btn-default">Reset</button>
+        </bs-panel>
+      </semantic-form>

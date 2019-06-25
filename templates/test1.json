@@ -1,0 +1,18 @@
+ {
+            "id" : "digitalAppTitle",
+          "label" : "Name der Digitalen Anwendung",
+          "minOccurs" : "1",
+          "xsdDatatype" : "http://www.w3.org/2001/XMLSchema#string",
+          "domain" : [ "https://www.museum4punkt0.de/catalogue/ontology/DigitalApp" ],
+          "description" : "This is a test",
+          "defaultValues" : [ ],
+          "range" : [ ],
+          "maxOccurs" : "1",
+          "order" : "1",
+          "insertPattern" : 
+            "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+           INSERT {$subject m4p0:digitalAppTitle $value} WHERE {}"
+          },
+          {
+              
+          }

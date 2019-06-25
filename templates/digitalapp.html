@@ -1,0 +1,66 @@
+<bs-panel>
+<semantic-form         
+        new-subject-template='https://www.museum4punkt0.de/catalogue/ontology/{{UUID}}'
+        post-action='redirect'
+        browser-persistence=false
+        form-id='DigitalApp'
+                   
+  fields='[
+          {
+          "id" : "http://www.metaphacts.com/fieldDefinition/Name%20der%20Digitalen%20Anwendung",
+          "label" : "Name der Digitalen Anwendung",
+          "minOccurs" : "1",
+          "xsdDatatype" : "http://www.w3.org/2001/XMLSchema#string",
+          "domain" : [ "https://www.museum4punkt0.de/catalogue/ontology/DigitalApp" ],
+          "description" : "This is a test",
+          "defaultValues" : [ ],
+          "range" : [ ],
+          "maxOccurs" : "1",
+          "order" : "1",
+          "insertPattern" : 
+            "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+           INSERT {$subject m4p0:digitalAppTitle $value} WHERE {}"         
+ 
+ 					},    
+					{
+              "id": "educationalConcept",
+              "label": "Vermittlungskonzept",
+              "xsdDatatype": "xsd:anyURI",
+              "selectPattern": "SELECT ?value WHERE {$subject <test:educationalConcept> ?value}",
+              "insertPattern": "INSERT {$subject <test:educationalConcept> ?value} WHERE {}",
+              "deletePattern": "DELETE {$subject <test:educationalConcept> ?value} WHERE {}"
+            }
+          ]'>
+   <h4>Digitale Anwendung</h4>
+        
+          <semantic-form-text-input for='http://www.metaphacts.com/fieldDefinition/Name%20der%20Digitalen%20Anwendung'></semantic-form-text-input>
+          
+          <semantic-form-errors></semantic-form-errors>
+          <!-- save and reset button for form -->
+          <button name="submit" class="btn btn-default">Save</button>
+          <button name="reset" class="btn btn-default">Reset</button>
+    <semantic-form-recover-notification></semantic-form-recover-notification>
+    <semantic-form-composite-input for="educationalConcept" new-subject-template="educationalConcept/{{id}}" 
+          fields='[                                                                                     
+           				{ 
+                  "id": "addressedUserNeeds",
+                  "label": "adressierte Benutzerbedürfnisse",
+                  "description": "täst",
+                  "xsdDatatype": "xsd:string",
+                  "minOccurs": "1",
+                  "maxOccurs": "unbound",            
+                  "insertPattern" : "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+                        INSERT {$subject m4p0:addressedUserNeeds $value} WHERE {}"
+                  }          
+                  ]'>
+      <semantic-form-text-input for="addressedUserNeeds"></semantic-form-text-input>
+   <button name="submit" class="btn btn-default">Save</button>
+          <button name="reset" class="btn btn-default">Reset</button>
+  </semantic-form-composite-input>
+
+   </semantic-form> 
+</bs-panel>
+ 
+  
+  
+

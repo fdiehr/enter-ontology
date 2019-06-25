@@ -1,0 +1,2 @@
+ PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+           INSERT {$subject m4p0:digitalAppTitle $value} WHERE {}
