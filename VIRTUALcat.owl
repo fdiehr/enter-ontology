@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65#"
      xml:base="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:crmdig="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#"
-     xmlns:idp="http://www.idpluslab.de/idplus-ontology#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:m4p0="https://www.museum4punkt0.de/catalogue/ontology/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:idp="http://www.idpluslab.de/idplus-ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:m4p0="https://www.museum4punkt0.de/catalogue/ontology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:crmdig="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://www.museum4punkt0.de/catalogue/ontology/">
         <rdfs:comment xml:lang="en">This is the ontology for the &apos;catalogue of digital applications and objects for museum education and research&apos; of museum4punkt0. 
 
@@ -235,6 +235,15 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/P94_has_created -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P94_has_created">
@@ -262,6 +271,18 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     <owl:ObjectProperty rdf:about="http://www.idpluslab.de/idplus-ontology#hasExpertiseIn">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hadFundingTimeSpan -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hadFundingTimeSpan">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Project"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#time"/>
+        <rdfs:comment xml:lang="de">1.4.1 Gesamt-Förderzeitraum. Bei allen gleich: Mai 2017 bis März 2020</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -307,18 +328,6 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasFundingTimeSpan -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasFundingTimeSpan">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Project"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
-        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#time"/>
-        <rdfs:comment xml:lang="de">1.4.1 Gesamt-Förderzeitraum. Bei allen gleich: Mai 2017 bis März 2020</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -696,6 +705,24 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
@@ -1026,6 +1053,16 @@ Angabe in Minuten! z.B. 8 Min.</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/nameOrg -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/nameOrg">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name der Organisation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/neededExpertise -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/neededExpertise">
@@ -1278,6 +1315,16 @@ Beispiel:
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>2.9  Über welche Kanäle wird der Nutzer auf die Anwendung aufmerksam? Über welche Kanäle ist sie auffindbar? Was sind die (digitalen) &quot;Touchpoints&quot; (Kundenkontaktpunkte)? z.B. Webpräsenz des Museums, Webpräsenz von Partnern/Partnerinstitutionen, Flyer, Plakate, Besucher-/Touristeninformation, App Store, Game Plattform, Social Media Plattform etc.
 Mehrfachnennung möglich!</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/urlOrg -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/urlOrg">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Website der Organisation</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2388,5 +2435,5 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
