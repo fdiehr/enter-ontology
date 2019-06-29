@@ -39,6 +39,12 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
+    <!-- http://purl.org/dc/terms/provenance -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of">
@@ -241,6 +247,16 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
+    <!-- http://www.europeana.eu/schemas/edm/dataProvider -->
+
+    <owl:ObjectProperty rdf:about="http://www.europeana.eu/schemas/edm/dataProvider">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/provenance"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasAreaOfUse -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasAreaOfUse">
@@ -358,6 +374,16 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasMediaType -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasMediaType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
     </owl:ObjectProperty>
     
 
@@ -915,6 +941,15 @@ Angabe in Minuten! z.B. 8 Min.</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/licensor -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/licensor">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/modelNr -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/modelNr">
@@ -1313,7 +1348,7 @@ Mehrfachnennung möglich!</rdfs:comment>
 
     <owl:Class rdf:about="http://www.idpluslab.de/idplus-ontology#time">
         <rdfs:comment>nach ID plus</rdfs:comment>
-        <rdfs:label xml:lang="de">Zeit</rdfs:label>
+        <rdfs:label>Zeit</rdfs:label>
     </owl:Class>
     
 
@@ -1761,6 +1796,14 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/MediaType -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MediaType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Mockup -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Mockup">
@@ -2193,46 +2236,66 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/developer -->
+    <!-- https://www.iana.org/assignments/media-types/application/zip -->
 
-    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/ontology/developer"/>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/editor -->
-
-    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/ontology/editor"/>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/game_designer -->
-
-    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/ontology/game_designer"/>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/user -->
-
-    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/ontology/user"/>
-    
-
-
-    <!-- https://www.wikidata.org/wiki/Q537225 -->
-
-    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q537225">
-        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
-        <rdfs:isDefinedBy>https://www.wikidata.org/wiki/Q537225</rdfs:isDefinedBy>
-        <rdfs:label>Swabian-Alemannic Fastnacht</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/application/zip">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://www.wikidata.org/wiki/Q82770 -->
+    <!-- https://www.iana.org/assignments/media-types/audio/mp4 -->
 
-    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q82770">
-        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
-        <rdfs:isDefinedBy>https://www.wikidata.org/wiki/Q82770</rdfs:isDefinedBy>
-        <rdfs:label>Bad Dürrheim</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/audio/mp4">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iana.org/assignments/media-types/audio/mpeg -->
+
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/audio/mpeg">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iana.org/assignments/media-types/image/jpeg -->
+
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/image/jpeg">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iana.org/assignments/media-types/image/png -->
+
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/image/png">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iana.org/assignments/media-types/image/tiff -->
+
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/image/tiff">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iana.org/assignments/media-types/video/mp4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/video/mp4">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.iana.org/assignments/media-types/video/mpeg -->
+
+    <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/video/mpeg">
+        <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
