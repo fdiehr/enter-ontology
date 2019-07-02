@@ -274,6 +274,17 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/fallsWithinAppCreation -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/fallsWithinAppCreation">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P10_falls_within"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <rdfs:comment>Zur Verbindung einzelner Entwicklungsschritte mit der Gesamtentwicklung der Digital App</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/generatedResource -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/generatedResource">
@@ -332,7 +343,7 @@ z.B.: Kreativ-Workshop, User Centred Design, (Paper-)Prototyping, Co-Creation Wo
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasDevelopmentTimeSpan">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
         <rdfs:comment>4.1 Gesamtentwicklungszeitraum. Wie lang hat die Entwicklung der Anwendung insgesamt gedauert? z.B. März 2018 bis Dezember 2018</rdfs:comment>
     </owl:ObjectProperty>
