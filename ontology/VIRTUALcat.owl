@@ -3,6 +3,7 @@
      xml:base="http://www.semanticweb.org/franzi/ontologies/2018/9/untitled-ontology-65"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+     xmlns:edm="http://www.europeana.eu/schemas/edm/"
      xmlns:idp="http://www.idpluslab.de/idplus-ontology#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -825,6 +826,15 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
+    <!-- http://www.europeana.eu/schemas/edm/isShownAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.europeana.eu/schemas/edm/isShownAt">
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
@@ -1013,6 +1023,34 @@ Angabe in Minuten! z.B. 8 Min.</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/fileType -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/fileType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/geometryType -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/geometryType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/length -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/length">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/extent"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/licensor -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/licensor">
@@ -1147,14 +1185,6 @@ Mehrfachnennung möglich!</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/urlDigitalObject -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/urlDigitalObject">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/urlDoc -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/urlDoc">
@@ -1212,24 +1242,6 @@ Mehrfachnennung möglich!</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">2.7.1 Empfohlener Betreuungsaufwand der Anwendung/der Station in der Ausstellung. Im Falle, dass die Anwendung in die Ausstellung integriert ist: Durch wieviel Personal sollten Besucher*innen optimalerweise betreut werden? (Dies bezieht sich insbesondere auf VR-Anwendungen, Spiele und Guides/Touren).</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/3dFileType -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/3dFileType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/3dGeometryType -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/3dGeometryType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
