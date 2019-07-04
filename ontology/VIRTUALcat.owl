@@ -509,6 +509,16 @@ Mehrfachnennung möglich!</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isDescribedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/JSONObject"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/isEducationalConceptOf -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isEducationalConceptOf">
@@ -830,6 +840,7 @@ Mehrfachnennung möglich</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://www.europeana.eu/schemas/edm/isShownAt">
         <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
@@ -882,16 +893,6 @@ z.B.: Erster Weltkrieg, Renaissance, 1914-1921, Kolonialzeit, Apollo 17 Mission<
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>3.1  Welchen thematischen Bezug weist der Inhalt auf? Bitte Schlagworte angeben z.B. Migration, Biodiversität, Bodentierleben, Fastnacht, Brauchtum, technologischer Wandel, Industrielle Revolution, Erfindungen, Klimawandel, kulturelle Vielfalt, Erster Weltkrieg, Familiengeschichte</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/dateOfFinalisation -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/dateOfFinalisation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -1041,6 +1042,15 @@ Angabe in Minuten! z.B. 8 Min.</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/jsonData -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/jsonData">
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/JSONObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/length -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/length">
@@ -1067,6 +1077,16 @@ Angabe in Minuten! z.B. 8 Min.</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">Modelnummer des Geräts</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/museumObjectTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/museumObjectTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1872,6 +1892,14 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/InterviewBefragungQuantitativ">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/JSONObject -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/JSONObject">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
     </owl:Class>
     
 
