@@ -2109,6 +2109,14 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Produkt -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Produkt">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Programming -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Programming">
