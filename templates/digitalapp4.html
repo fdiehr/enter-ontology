@@ -6,19 +6,71 @@
         form-id='DigitalApp'
         fields="[[fieldDefinitions]]"
         >
-<semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/digitalAppTitle"></semantic-form-text-input>
-<semantic-form-select-input for="http://www.researchspace.org/instances/fields/hasTechnologyType"></semantic-form-select-input>
-<semantic-form-select-input for="http://www.researchspace.org/instances/fields/hasMaturityLevel"></semantic-form-select-input>
-<semantic-form-select-input for="http://www.researchspace.org/instances/fields/hasAreaOfUse"></semantic-form-select-input>
-<semantic-form-select-input for="http://www.researchspace.org/instances/fields/userGeneratedContentType"></semantic-form-select-input>
-<semantic-form-text-input for="http://www.researchspace.org/instances/fields/touchpoints1"></semantic-form-text-input>
+    
+    <h3>Rund um die digitale Anwendung</h3>
+    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/digitalAppTitle"></semantic-form-text-input>
+    <semantic-form-select-input for="http://www.researchspace.org/instances/fields/hasTechnologyType"></semantic-form-select-input>
+    <semantic-form-select-input for="http://www.researchspace.org/instances/fields/hasMaturityLevel"></semantic-form-select-input>
+    <semantic-form-select-input for="http://www.researchspace.org/instances/fields/hasAreaOfUse"></semantic-form-select-input>
+    <semantic-form-select-input for="http://www.researchspace.org/instances/fields/userGeneratedContentType"></semantic-form-select-input>
+    <semantic-form-text-input for="http://www.researchspace.org/instances/fields/touchpoints1"></semantic-form-text-input>
 
-<semantic-form-composite-input for="http://www.researchspace.org/instances/fields/E31_Document" new-subject-template="http://www.researchspace.org/instances/fields/E31_Document{id}}" fields="[[fieldDefinitions]]">
-    <h3>Sourcecode</h3>        
-    <semantic-form-text-input for="http://www.researchspace.org/instances/fields/source"></semantic-form-text-input>
-    <semantic-form-text-input for="http://www.researchspace.org/instances/fields/license"></semantic-form-text-input>
+    <h3>Sourcecode der digitalen Anwendung</h3>  
+    <semantic-form-composite-input for="http://www.researchspace.org/instances/fields/E31_Document" new-subject-template="http://www.researchspace.org/instances/fields/E31_Document{id}}" fields="[[fieldDefinitions]]">   
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/source"></semantic-form-text-input>
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/license"></semantic-form-text-input>
+    </semantic-form-composite-input>
+
+    <h3>Abspiel-und Präsentationsgerät</h3>
+    <semantic-form-composite-input for="http://www.researchspace.org/instances/fields/OutputDevice" new-subject-template="http://www.researchspace.org/instances/fields/OutputDevice{id}}" fields="[[fieldDefinitions]]">
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/toolTitle"></semantic-form-text-input>
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/modelNr"></semantic-form-text-input>
+        <semantic-form-select-input for="http://www.researchspace.org/instances/fields/needsPermanentInternetAccess"></semantic-form-select-input>
+    </semantic-form-composite-input>
+
+    
+    <semantic-form-composite-input for="http://www.researchspace.org/instances/fields/Hardware" new-subject-template="http://www.researchspace.org/instances/fields/Hardware{id}}" fields="[[fieldDefinitions]]">
+        <h3>weitere benötigte Hardware</h3>
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/toolTitle"></semantic-form-text-input>
+        <h4>Mindestanforderungen</h4>
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/requiredProcessor"></semantic-form-text-input>
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/requiredRAM"></semantic-form-text-input>
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/requiredHardDriveSpace"></semantic-form-text-input>
+        <semantic-form-text-input for="http://www.researchspace.org/instances/fields/requiredGraphicsCard"></semantic-form-text-input>
+    
+        <h4>Betriebssystem</h4>
+        <semantic-form-select-input for="http://www.researchspace.org/instances/fields/usesOperatingSystem">
+
+    </semantic-form-composite-input>
+
+
+<bs-panel>
+    <h3>Benötigte Software</h3>
+    <!--
+    <semantic-form-composite-input for="http://www.researchspace.org/instances/fields/Software" new-subject-template="http://www.researchspace.org/instances/fields/Software{id}}" fields="[[fieldDefinitions]]">
+       -->
+        <!--
+        <semantic-form-select-input for="http://www.researchspace.org/instances/fields/hasSoftwareType"></semantic-form-select-input>
+        -->
+        <semantic-form-autocomplete-input for="http://www.researchspace.org/instances/fields/Software" placeholder='Search or create a software...'></semantic-form-autocomplete-input>
+        <semantic-form new-subject-template="http://www.researchspace.org/instances/fields/Software{{id}}" fields="[[fieldDefinitions]]">
+            <semantic-form-text-input for="http://www.researchspace.org/instances/fields/toolTitle"></semantic-form-text-input>
+            <semantic-form-text-input for="http://www.researchspace.org/instances/fields/version"></semantic-form-text-input> 
+            <semantic-form-errors></semantic-form-errors>
+              <button name='submit' class='btn btn-default'>Create Software</button>
+              <button name='reset' class='btn btn-default'>Reset Software</button>
+        </semantic-form>  
+        <semantic-form-composite-input for="http://www.researchspace.org/instances/fields/E31_Document" new-subject-template="http://www.researchspace.org/instances/fields/E31_Document{id}}" fields="[[fieldDefinitions]]">
+            <h4>Quelle</h4>  
+                <semantic-form-text-input for="http://www.researchspace.org/instances/fields/source"></semantic-form-text-input>
+                <semantic-form-text-input for="http://www.researchspace.org/instances/fields/license"></semantic-form-text-input>
+        </semantic-form-composite-input>
+        <!--
 </semantic-form-composite-input>
-
+    -->
+    
+ 
+</bs-panel>
 
 <semantic-form-errors></semantic-form-errors>
 <!-- save and reset button for form -->

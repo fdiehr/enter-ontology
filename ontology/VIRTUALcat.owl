@@ -544,6 +544,16 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/needsOperatingSystem -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/needsOperatingSystem">
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
+        <rdfs:comment xml:lang="de">Angabe des Betriebssystems einer Hardware</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/qualityOfGeometryRes -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/qualityOfGeometryRes">
@@ -804,7 +814,6 @@ Mehrfachnennung möglich</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment xml:lang="de">Hiermit direkt zu CC verlinken für Logo etc.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1205,16 +1214,6 @@ Mehrfachnennung möglich!</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/urlDoc -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/urlDoc">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/urlOrg -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/urlOrg">
@@ -1557,6 +1556,14 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Application -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Application">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse">
@@ -1838,6 +1845,14 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/HardwareType -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/HardwareType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/HeadMountedDisplay -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/HeadMountedDisplay">
@@ -1880,6 +1895,14 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/InternetExplorer -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/InternetExplorer">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Webbrowser"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/InterviewBefragungQualitativ -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/InterviewBefragungQualitativ">
@@ -1900,14 +1923,6 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/JSONObject">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Java -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Java">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
     </owl:Class>
     
 
@@ -1960,9 +1975,9 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/MacOSX -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/MacOS -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MacOSX">
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MacOS">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem"/>
     </owl:Class>
     
@@ -2205,6 +2220,14 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/SoftwareType -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Sonderausstellung -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Sonderausstellung">
@@ -2329,7 +2352,7 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Webbrowser -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Webbrowser">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType"/>
     </owl:Class>
     
 
