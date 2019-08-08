@@ -1,0 +1,47 @@
+<bs-panel>
+    <h1>Digitale Anwendung</h1>
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/DigitalApp/{{UUID}}'
+        post-action='redirect' browser-persistence=false form-id='DigitalApp' fields="[[fieldDefinitions]]">
+
+        <bs-tabs fixed-key="form">
+
+            <bs-tab event-key="1" title="Grundinformationen">
+                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/title">
+                </semantic-form-text-input>
+                
+                <semantic-form-select-input for="http://www.metaphacts.com/fieldDefinition/hasTechnologyType">
+                </semantic-form-select-input>
+                
+                <semantic-form-select-input for="http://www.metaphacts.com/fieldDefinition/hasMaturityLevel">
+                </semantic-form-select-input>
+                
+                <semantic-form-select-input for="http://www.metaphacts.com/fieldDefinition/hasAreaOfUse">
+                </semantic-form-select-input>
+                <!--
+                <semantic-form-select-input
+                    for="http://www.researchspace.org/instances/fields/userGeneratedContentType">
+                </semantic-form-select-input>
+                -->
+                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/touchpoints">
+                </semantic-form-text-input>
+
+                <h3>Sourcecode der digitalen Anwendung</h3>
+                <semantic-form-composite-input for="http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in"
+                    new-subject-template="https://enter.museum4punkt0.de/resources/E31_Document/{{UUID}}"
+                    fields="[[fieldDefinitions]]">
+                    <h4>Link zu GitHub</h4>
+                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/license">
+                    </semantic-form-text-input>
+                </semantic-form-composite-input>
+
+
+            </bs-tab>
+            <semantic-form-errors></semantic-form-errors>
+            <!-- save and reset button for form -->
+            <button name="submit" class="btn btn-default">Save</button>
+            <button name="reset" class="btn btn-default">Reset</button>
+        </bs-tabs>
+    </semantic-form>
+</bs-panel>
