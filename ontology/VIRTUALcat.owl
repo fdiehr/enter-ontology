@@ -893,6 +893,15 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
+    <!-- https://schema.org/image -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/image">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/aboutPeriod -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/aboutPeriod">
@@ -1025,7 +1034,7 @@ Je Methode aus 4.3 max. 200 Zeichen Beschreibung,</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/extentOfUsage">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/extent"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">2.7.2 Empfohlene Nutzungsdauer der Anwendung in der Ausstellung. Sicherlich können Besucher die Anwendung auch kürzer oder länger nutzen, aber was ist eine gute Länge, um die Anwendung sinnvoll zu nutzen? (Insbesondere relevant für VR-Anwendungen, Spiele und Filme).
 
@@ -1279,7 +1288,7 @@ Mehrfachnennung möglich!</rdfs:comment>
     <!-- https://www.museum4punkt0.de/catalogue/ontology/visitorCare -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/visitorCare">
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">2.7.1 Empfohlener Betreuungsaufwand der Anwendung/der Station in der Ausstellung. Im Falle, dass die Anwendung in die Ausstellung integriert ist: Durch wieviel Personal sollten Besucher*innen optimalerweise betreut werden? (Dies bezieht sich insbesondere auf VR-Anwendungen, Spiele und Guides/Touren).</rdfs:comment>
     </owl:DatatypeProperty>
@@ -2025,6 +2034,14 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Other -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Other">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/OutputDevice -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice">
@@ -2375,7 +2392,7 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/stationaryDevice">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDeviceType"/>
-        <rdfs:label xml:lang="de">fest installierte Station</rdfs:label>
+        <rdfs:label xml:lang="de">stationäres Gerät</rdfs:label>
     </owl:Class>
     
 
