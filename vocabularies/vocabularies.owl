@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.museum4punkt0.de/catalogue/vocabularies/"
+     xml:base="https://www.museum4punkt0.de/catalogue/vocabularies/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:m4p0v="https://www.museum4punkt0.de/catalogue/vocabularies/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/">
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:comment xml:lang="en">These are the vocabularies of enter.museum4punkt0
+
+The project museum4punkt0 is funded by the Federal Government Commissioner for Culture and the Media in accordance with a resolution issued by the German Bundestag (Parliament of the Federal Republic of Germany).
+
+CC-BY 4.0 International License 
+Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Adolescent -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Adolescent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Adults -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Adults">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/CitizenScientist -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/CitizenScientist">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Enthusiast -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Enthusiast">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Preschoolers -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Preschoolers">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Schoolchildren -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Schoolchildren">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Adolescent -->
+
+    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Adolescent">
+        <skos:inScheme rdf:resource="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Adults -->
+
+    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Adults">
+        <skos:inScheme rdf:resource="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/CitizenScientist -->
+
+    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/CitizenScientist">
+        <skos:inScheme rdf:resource="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Enthusiast -->
+
+    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Enthusiast">
+        <skos:inScheme rdf:resource="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Preschoolers -->
+
+    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Preschoolers">
+        <skos:inScheme rdf:resource="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/Schoolchildren -->
+
+    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Schoolchildren">
+        <skos:inScheme rdf:resource="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience -->
+
+    <owl:NamedIndividual rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/TargetAudience"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Adolescent">
+        <skos:altLabel xml:lang="de">Heranwachsende</skos:altLabel>
+        <skos:prefLabel xml:lang="de">Jugendliche</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Adults">
+        <skos:prefLabel xml:lang="de">Erwachsene</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/CitizenScientist">
+        <skos:prefLabel xml:lang="de">Bürgerwissenschaftler</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Enthusiast">
+        <skos:prefLabel xml:lang="de">Enthusiasten</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Preschoolers">
+        <skos:prefLabel xml:lang="de">Vorschulkinder</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/vocabularies/Schoolchildren">
+        <skos:prefLabel xml:lang="de">Schulkinder</skos:prefLabel>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

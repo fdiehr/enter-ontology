@@ -363,6 +363,16 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasEducationalConcept -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasEducationalConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasEmployee -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasEmployee">
@@ -535,16 +545,6 @@ Mehrfachnennung möglich!</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/JSONObject"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/isEducationalConceptOf -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isEducationalConceptOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
-        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
     </owl:ObjectProperty>
     
 
@@ -1626,14 +1626,6 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Children -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Children">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
-    </owl:Class>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist">
@@ -1846,10 +1838,11 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/ImmersivesFormat -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/ImmersiveFormat -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ImmersivesFormat">
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ImmersiveFormat">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+        <rdfs:label xml:lang="de">Immersives Format</rdfs:label>
     </owl:Class>
     
 
@@ -2001,10 +1994,11 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/NarrativesFormat -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/NarrativeFormat -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/NarrativesFormat">
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/NarrativeFormat">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+        <rdfs:label xml:lang="de">Narratives Format</rdfs:label>
     </owl:Class>
     
 
@@ -2060,10 +2054,11 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/PartizipativesFormat -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/ParticipativeFormat -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/PartizipativesFormat">
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ParticipativeFormat">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+        <rdfs:label xml:lang="de">Partizipatives Format</rdfs:label>
     </owl:Class>
     
 
@@ -2080,6 +2075,23 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Photogrammetrie">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/3DScan"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/PlayfulFormat -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/PlayfulFormat">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+        <rdfs:label xml:lang="de">Spielerisches Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Preschoolers -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Preschoolers">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
     </owl:Class>
     
 
@@ -2164,6 +2176,14 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Schoolchildren -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Schoolchildren">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Software -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Software">
@@ -2184,14 +2204,6 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SpecimenDescription">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/SpielerischesFormat -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SpielerischesFormat">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
     </owl:Class>
     
 
@@ -2314,14 +2326,6 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Wireframe">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/LowFidelityPrototype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/YoungAdults -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/YoungAdults">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Age"/>
     </owl:Class>
     
 
