@@ -431,7 +431,6 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasNarration">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
-        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:comment>Eine DigitalApp beschäftigt sich mit einem Thema, hat einen konkreten Gegenstand zu Thema.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -485,6 +484,17 @@ z.B. Probanden-Testing, Online Nutzerumfrage, Besucherbeobachtung, Besucherbefra
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasSubject -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasSubject">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Subject"/>
+        <rdfs:comment xml:lang="de">3.1  Welchen thematischen Bezug weist der Inhalt auf? Bitte Schlagworte angeben z.B. Migration, Biodiversität, Bodentierleben, Fastnacht, Brauchtum, technologischer Wandel, Industrielle Revolution, Erfindungen, Klimawandel, kulturelle Vielfalt, Erster Weltkrieg, Familiengeschichte</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasTargetAudience -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasTargetAudience">
@@ -516,6 +526,18 @@ z.B. Probanden-Testing, Online Nutzerumfrage, Besucherbeobachtung, Besucherbefra
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasTouchpoints -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasTouchpoints">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Touchpoints"/>
+        <rdfs:comment xml:lang="de">2.9  Über welche Kanäle wird der Nutzer auf die Anwendung aufmerksam? Über welche Kanäle ist sie auffindbar? Was sind die (digitalen) &quot;Touchpoints&quot; (Kundenkontaktpunkte)? z.B. Webpräsenz des Museums, Webpräsenz von Partnern/Partnerinstitutionen, Flyer, Plakate, Besucher-/Touristeninformation, App Store, Game Plattform, Social Media Plattform etc.
+Mehrfachnennung möglich!</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasUserGeneratedContentType -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasUserGeneratedContentType">
@@ -532,7 +554,6 @@ Mehrfachnennung möglich!</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/isAboutMuseumObject">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
         <rdfs:comment>3.2 Weist die Anwendung einen konkreten Bezug zu einem (Sammlungs-)Objekt (auch Lebewesen) auf? z.B. Gemälde &quot;Der Kaufmann Georg Giese&quot; von Hans Hohlbein, Lunar Rover Apollo 17, Sulzer Dampfmaschine, Springschwanz etc.</rdfs:comment>
     </owl:ObjectProperty>
@@ -783,9 +804,7 @@ Mehrfachnennung möglich</rdfs:comment>
 
     <!-- http://purl.org/dc/elements/1.1/subject -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/subject">
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
     
 
 
@@ -906,7 +925,6 @@ Mehrfachnennung möglich</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/aboutPeriod">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="de">3.3 Thematisiert/Behandelt der Inhalt/die Narration eine bestimmte zeitliche Periode, einen konkreten Zeitabschnitt? Wird ein Bezug zu einem historischen oder zeitgenössischen Ereignis hergestellt? 
 z.B.: Erster Weltkrieg, Renaissance, 1914-1921, Kolonialzeit, Apollo 17 Mission</rdfs:comment>
@@ -918,20 +936,8 @@ z.B.: Erster Weltkrieg, Renaissance, 1914-1921, Kolonialzeit, Apollo 17 Mission<
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/aboutPlace">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="de">3.4 Weist der Inhalt einen konkreten Ortsbezug auf oder thematisiert er spezifische Orte/Geografika? z.B. Landeplatz der Apollo Mission auf dem Mond, Russland, Südsee, pazifischer Ozean</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/aboutSubject -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/aboutSubject">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>3.1  Welchen thematischen Bezug weist der Inhalt auf? Bitte Schlagworte angeben z.B. Migration, Biodiversität, Bodentierleben, Fastnacht, Brauchtum, technologischer Wandel, Industrielle Revolution, Erfindungen, Klimawandel, kulturelle Vielfalt, Erster Weltkrieg, Familiengeschichte</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -978,7 +984,7 @@ Je Methode aus 4.3 max. 200 Zeichen Beschreibung,</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/descriptionOfNarration">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>2.4 Beschreibung des Inhalts/der Narration. (Beschreibung min. 1500, max. 3000 Zeichen)</rdfs:comment>
     </owl:DatatypeProperty>
@@ -1228,18 +1234,6 @@ Beispiel:
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
         <rdfs:domain rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/touchpoints -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/touchpoints">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>2.9  Über welche Kanäle wird der Nutzer auf die Anwendung aufmerksam? Über welche Kanäle ist sie auffindbar? Was sind die (digitalen) &quot;Touchpoints&quot; (Kundenkontaktpunkte)? z.B. Webpräsenz des Museums, Webpräsenz von Partnern/Partnerinstitutionen, Flyer, Plakate, Besucher-/Touristeninformation, App Store, Game Plattform, Social Media Plattform etc.
-Mehrfachnennung möglich!</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1547,7 +1541,6 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     <!-- http://www.idpluslab.de/idplus-ontology#topic -->
 
     <owl:Class rdf:about="http://www.idpluslab.de/idplus-ontology#topic">
-        <owl:equivalentClass rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Narration"/>
         <rdfs:comment>nach ID plus</rdfs:comment>
         <rdfs:label xml:lang="de">Thema</rdfs:label>
     </owl:Class>
@@ -1985,15 +1978,6 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Narration -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Narration">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
-        <rdfs:comment>das Thema/der Gegenstand beschreibt eine Sache, die Gegenstand der Wissensvermittlung ist.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/NarrativeFormat -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/NarrativeFormat">
@@ -2216,6 +2200,14 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Subject -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Subject">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/TargetAudience -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/TargetAudience">
@@ -2245,6 +2237,14 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Text">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Touchpoints -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Touchpoints">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
     </owl:Class>
     
 
@@ -2531,6 +2531,37 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/video/mpeg">
         <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Expertise"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OutputDeviceType"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/QualityOfGeometryRes"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/TargetAudience"/>
+            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
