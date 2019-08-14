@@ -340,6 +340,16 @@ z.B.: Kreativ-Workshop, User Centred Design, (Paper-)Prototyping, Co-Creation Wo
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasCreationPhase -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasCreationPhase">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationPhase"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasDevelopmentTimeSpan -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasDevelopmentTimeSpan">
@@ -1218,6 +1228,17 @@ Beispiel:
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/shortTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/shortTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="de">Kurztitel der digitalen Anwendung</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/textureType -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/textureType">
@@ -1619,6 +1640,15 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Brainstorming -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Brainstorming">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationPhase"/>
+        <rdfs:label xml:lang="de">Ideenfindung und Recherche</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist">
@@ -1643,6 +1673,15 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Conception -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Conception">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationPhase"/>
+        <rdfs:label xml:lang="de">inhaltliche und technische Konzeption</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/ContentType -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ContentType">
@@ -1654,6 +1693,14 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     <!-- https://www.museum4punkt0.de/catalogue/ontology/CreationMethod -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/CreationPhase -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CreationPhase">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
     </owl:Class>
     
@@ -1912,6 +1959,15 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/MaterialProduction -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MaterialProduction">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationPhase"/>
+        <rdfs:label xml:lang="de">Materialerzeugung- und beschaffung</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Materialrecherche -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Materialrecherche">
@@ -2132,6 +2188,15 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/QualityOfGeometryRes">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Realisation -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Realisation">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationPhase"/>
+        <rdfs:label xml:lang="de">Umsetzung</rdfs:label>
     </owl:Class>
     
 

@@ -1,0 +1,102 @@
+<bs-panel>
+    <h1>Entwicklung</h1>
+    <p>Beschreiben Sie hier alles, was im Kontext der Entwicklung der digitalen Anwendung relevant war.</p>
+    <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/E65_Creation/{{UUID}}'
+        post-action='redirect' browser-persistence=false form-id='Creation' fields="[[fieldDefinitions
+        hasCreatedDigitalApp='http://www.metaphacts.com/fieldDefinition/hasCreatedDigitalApp'
+        descriptionOfCreationChallenges='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges'
+        beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
+        endDate='http://www.metaphacts.com/fieldDefinition/endDate'
+        fallsWithinAppCreation='http://www.metaphacts.com/fieldDefinition/fallsWithinAppCreation'
+        ]]">
+
+        <semantic-form-autocomplete-input for="hasCreatedDigitalApp">
+        </semantic-form-autocomplete-input>
+        <semantic-form-text-input for="descriptionOfCreationChallenges" multiline=true>
+        </semantic-form-text-input>
+        <h3>Gesamtentwicklungszeitraum</h3>
+        <p>Geben Sie den Beginn des Zeitraums an. Wenn Sie das taggenaue Datum nicht angeben können, so schätzen Sie es.
+            Es kommt vor allem darauf an eine ungefähre Einschätzung von der Dauer des Entwicklungsprozesses zu geben.
+            Dies soll es denjenigen helfen, die selbst die Entwicklung einer digitalen Anwendung dieser Art planen und
+            ihnen die Möglichkeit geben Zeiten realistischer zu planen.</p>
+        <semantic-form-datetime-input for="beginDate"></semantic-form-datetime-input>
+        <semantic-form-datetime-input for="endDate"></semantic-form-datetime-input>
+
+
+        <h2>Entwicklungsschritte</h2>
+        <p> Die unterschiedlichen Entwicklungsschritte sind jeder für sich zu beschreiben.
+            Unterschieden werden die einzelnen Schritte anhand der jeweils genutzen Methoden und/oder ihrer
+            Zugehörigkeit zu übergeordneten
+            Entwicklungsphasen. Wie granular die Entwicklung der Anwendung beschrieben wird liegt im
+            Ermessen des Erfassenden.
+        </p>
+
+        <semantic-form-composite-input for="fallsWithinAppCreation"
+            new-subject-template="https://enter.museum4punkt0.de/resources/E65_Creation/{{UUID}}" fields="[[fieldDefinitions
+            hasCreationMethod='http://www.metaphacts.com/fieldDefinition/hasCreationMethod'
+            hasCreationPhase='http://www.metaphacts.com/fieldDefinition/hasCreationPhase'
+            neededExpertise=''
+            ]]">
+
+
+            <semantic-form-tree-picker-input for="hasCreationMethod">
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                    fields="[[fieldDefinitions
+                    inSchemeCreationMethod='http://www.metaphacts.com/fieldDefinition/inSchemeCreationMethod'    
+                    prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                    altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                    broaderCreationMethod='http://www.metaphacts.com/fieldDefinition/broaderCreationMethod'                
+                        ]]">
+                    <semantic-form-hidden-input for="inSchemeCreationMethod" default-value='skos:Concept'>
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+                    <semantic-form-tree-picker-input for="broaderCreationMethod"></semantic-form-tree-picker-input>
+
+                    <semantic-form-errors></semantic-form-errors>
+                    <button name='submit' class='btn btn-default'>Create</button>
+                    <button name='reset' class='btn btn-default'>Reset</button>
+                </semantic-form>
+            </semantic-form-tree-picker-input>
+            <semantic-form-select-input for="hasCreationPhase">
+            </semantic-form-select-input>
+
+            <semantic-form-tree-picker-input for="neededExpertise">
+                <semantic-form new-subject-template="https://enter.museum4punkt0.de/resources/terms/{{prefLabel}}"
+                    fields="[[fieldDefinitions
+                        inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
+                        prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
+                        altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
+                        broaderExpertise='http://www.metaphacts.com/fieldDefinition/broaderExpertise'                  
+                            ]]">
+                    <semantic-form-hidden-input for="inSchemeExpertise" default-value='skos:Concept'>
+                    </semantic-form-hidden-input>
+                    <semantic-form-text-input for="prefLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
+                    </semantic-form-text-input>
+                    <semantic-form-tree-picker-input for="broaderCreationMethod"></semantic-form-tree-picker-input>
+
+                    <semantic-form-errors></semantic-form-errors>
+                    <button name='submit' class='btn btn-default'>Create</button>
+                    <button name='reset' class='btn btn-default'>Reset</button>
+                </semantic-form>
+            </semantic-form-tree-picker-input>
+
+            <semantic-form-text-input for="" multiline=true>
+            </semantic-form-text-input>
+
+
+
+        </semantic-form-composite-input>
+
+
+        <semantic-form-errors></semantic-form-errors>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <button name="submit" class="btn btn-default">Save</button>
+        <button name="reset" class="btn btn-default">Reset</button>
+
+    </semantic-form>
+</bs-panel>

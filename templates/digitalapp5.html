@@ -8,9 +8,10 @@
             <bs-tab event-key="1" title="Grundinformationen">
 
 
-                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/title">
+                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/digitalAppTitle">
                 </semantic-form-text-input>
-
+                <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/shortTitle">
+                </semantic-form-text-input>
                 <semantic-form-select-input for="http://www.metaphacts.com/fieldDefinition/hasTechnologyType">
                 </semantic-form-select-input>
 
@@ -116,7 +117,7 @@
                             inSchemeOutputDeviceType='http://www.metaphacts.com/fieldDefinition/inSchemeOutputDeviceType'
                             prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                             altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
-                            broader='http://www.metaphacts.com/fieldDefinition/broader'
+                            broaderOutputDevice='http://www.metaphacts.com/fieldDefinition/broaderOutputDevice'
                             ]]">
                             <semantic-form-hidden-input for="inSchemeOutputDeviceType" default-value='skos:Concept'>
                             </semantic-form-hidden-input>
@@ -124,7 +125,7 @@
                             </semantic-form-text-input>
                             <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
                             </semantic-form-text-input>
-                            <semantic-form-tree-picker-input for="broader"></semantic-form-tree-picker-input>
+                            <semantic-form-tree-picker-input for="broaderOutputDevice"></semantic-form-tree-picker-input>
 
                             <semantic-form-errors></semantic-form-errors>
                             <button name='submit' class='btn btn-default'>Create</button>
@@ -267,7 +268,7 @@
                         </semantic-form>
 
                     </semantic-form-tree-picker-input>
-                    
+
 
                     <h3>Gegenstand der Vermittlung</h3>
                     <p>Das Vermittlungskonzept umfasst eine Narration mit der ein Thema vermittelt wird. Oder mit dem
@@ -301,11 +302,30 @@
 
                 </semantic-form-composite-input>
             </bs-tab>
-
+<!--
             <bs-tab event-key="4" title="Entwicklung">
 
+                <semantic-form-composite-input for=""
+                    new-subject-template="https://enter.museum4punkt0.de/resources/E65_Creation/{{UUID}}"
+                    fields="[[fieldDefinitions]]">
+                    <h3>Entwicklungsschritte</h3>
+                    <p>Beschreiben Sie hier alles, was im Kontext der Entwicklung der digitalen Anwendung relevant war.
+                        Die unterschiedlichen Entwicklungsschritte jeder für sich beschreiben,
+                        unterschieden anhand der jeweils genutzen Methoden und/oder der übergeordneten
+                        Entwicklungsphasen. Wie granular die Entwicklung der Anwendung beschrieben wird liegt im
+                        Ermessen des Erfassenden.
+                    </p>
+                    <semantic-form-text-input for="">
+                    </semantic-form-text-input>
+                    <semantic-form-text-input for="" multiline=true>
+                    </semantic-form-text-input>
+
+
+
+                </semantic-form-composite-input>
 
             </bs-tab>
+            -->
             <bs-tab event-key="5" title="Beforschung">
                 <h2>Testings und begleitende Untersuchungen</h2>
 
@@ -319,7 +339,11 @@
                 -->
             </bs-tab>
 
+            <bs-tab event-key="7" title="Projektkontext">
+                <h2>Projekt und Beteiligte</h2>
+                <h2>Förderung</h2>
 
+            </bs-tab>
 
 
             <semantic-form-errors></semantic-form-errors>
