@@ -524,6 +524,16 @@ z.B. Probanden-Testing, Online Nutzerumfrage, Besucherbeobachtung, Besucherbefra
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasToolType -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasToolType">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ToolType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasTotalRunTime -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasTotalRunTime">
@@ -673,7 +683,6 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usedTool">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
         <rdfs:comment xml:lang="de">4.4 Programme/Geräte/Hilfsmittel. Welche Systeme/Programme, Geräte und/oder Hilfsmittel wurden für die Entwicklung der Anwendung genutzt? Hier abstrahieren, z.B. Game-Engine, 3D-Animationsprogramm, Sketchpad, Java-Entwicklungsumgebung, Videoschnittprogramm</rdfs:comment>
     </owl:ObjectProperty>
@@ -997,17 +1006,6 @@ Je Methode aus 4.3 max. 200 Zeichen Beschreibung,</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationalConcept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>2.4 Beschreibung des Inhalts/der Narration. (Beschreibung min. 1500, max. 3000 Zeichen)</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/descriptionOfRequirements -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/descriptionOfRequirements">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
-        <rdfs:domain rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="de"></rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1819,14 +1817,6 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Fragebogen -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Fragebogen">
-        <rdfs:subClassOf rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
-    </owl:Class>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Freie3DModellierung -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Freie3DModellierung">
@@ -1839,14 +1829,6 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Guidesystem">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Handreichung -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Handreichung">
-        <rdfs:subClassOf rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
     </owl:Class>
     
 
@@ -2302,6 +2284,14 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Text">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/ToolType -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ToolType">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
     </owl:Class>
     
 
