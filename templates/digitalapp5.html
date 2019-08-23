@@ -18,15 +18,21 @@
     <li class="active">Digitale Anwendung</li>
 </ol>
 -->
-<bs-panel>
+<bs-panel>    
     <h1>Digitale Anwendung</h1>
     <semantic-form new-subject-template='https://enter.museum4punkt0.de/resources/DigitalApp/{{UUID}}'
-        post-action='redirect' browser-persistence=false form-id='DigitalApp' fields="[[fieldDefinitions]]">
+        post-action='redirect'  browser-persistence=false form-id='DigitalApp' fields="[[fieldDefinitions]]">
         <!--
            
             Wo kann man einstellen wohin der 'redirect' geht? Ich hätte gern, dass er dann zur Ansicht der erstellten Instanz geht, also im Formularstyle. Von der Ansicht ausgehend hätt eich gern nen Button, 
             der zum Edit (der bereits ausgefüllten Maske) der Instanz führt).
               <semantic-form subject='[[this]]'>
+                  Every form instance operates on one unique subject (defined using the subject attribute <semantic-form subject=‘IRI’>
+• The subject must be an IRI and will be injected, i.e. replace all $subject variables in all SPARQL patterns in all field definitions used in the form during runtime.
+• The subject does not necessarily need to exist in the graph, i.e. if the form is used to create new records, the subject can be constructed, for example, using a specific backend template helper function (e.g. constructing an IRI based on UUIDs).
+• To edit an existing record (subject) the form can be, for example, embedded into the templates and then be parameterized using [[this]] helper. A different option is to have a dedicated page for editing (i.e. to not overload visualization templates) and propagate the subject via a URL parameter. This is primarily a design decision.
+• If subject is not set explicitly, it defaults to the current resource IRI.
+einfach hinzufügen im semantic-form:  ubject='{IRI}' IRI muss dasnn das Display sein. Jetzt nur noch die Frage wie man das visualisiert...
         -->
 
         <bs-tabs fixed-key="form">
@@ -100,10 +106,6 @@
                   
 -->
 
-<!--
-    Feld löschen:
-    http://www.metaphacts.com/fieldDefinition/hasEducationalConcept
--->
 
             </bs-tab>
            

@@ -1,0 +1,57 @@
+
+  <bs-row>
+        <bs-col sm-offset="2">
+          <h1> Digitale Anwendung </h1>
+        </bs-col>
+      </bs-row>
+      <bs-row>
+        <bs-col sm="3" sm-offset="2">
+          <semantic-query query="SELECT ?title WHERE {??  <https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle> ?title }" 
+          template="<p>DigitalApp:{{#each bindings}}{{digitalAppTitle.value}}{{/each}}</p>"></semantic-query>
+          <!--
+          <semantic-query query="SELECT ?thumbnail WHERE {??  <http://schema.org/thumbnail> ?thumbnail }" template='{{#each bindings}}<img src="{{thumbnail.value}}">{{/each}}'></semantic-query>
+          http://purl.org/dc/terms/
+          -->
+        </bs-col>
+    
+        <bs-col sm="3">
+          <b></b>
+          <semantic-table
+                  query='SELECT ?doc ?label WHERE {?? <h>ttp://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in> ?doc. ?doc <http://schema.org/url> ?value}'
+                  options='{"showFilter":false}'
+                  tuple-template='{{> tupleTemplate}}'
+          >
+            <template id='tupleTemplate'>
+              <div style="height: 250px; width: 250px; margin: 10px;" class="panel panel-default">         
+                <div class="panel-heading" style="overflow: hidden; text-overflow: ellipsis;">
+                  <semantic-link uri="{{friend.value}}">{{label.value}}</semantic-link>
+                </div>
+                <div class="panel-body">
+                  <img class="img-responsive img-thumbnail" style="max-height: 130px;display: block;margin-left:auto;margin-right:auto;" src="{{thumbnail.value}}"/>
+                </div>
+              </div>
+            </template>
+          </semantic-table>
+        </bs-col>
+    
+        <bs-col sm="3">
+          <b>Interests</b>
+          <semantic-table
+                  query='SELECT ?topic ?label ?thumbnail WHERE { ?? <http://xmlns.com/foaf/0.1/topic_interest> ?topic. ?topic rdfs:label ?label; <http://schema.org/thumbnail> ?thumbnail }'
+                  options='{"showFilter":false}'
+                  tuple-template='{{> tupleTemplate}}'
+          >
+            <template id='tupleTemplate'>
+              <div style="height: 250px; width: 250px; margin: 10px;" class="panel panel-default">         
+                <div class="panel-heading" style="overflow: hidden; text-overflow: ellipsis;">
+                  <semantic-link uri="{{topic.value}}">{{label.value}}</semantic-link>
+                </div>
+                <div class="panel-body">
+                  <img class="img-responsive img-thumbnail" style="max-height: 130px;display: block;margin-left:auto;margin-right:auto;" src="{{thumbnail.value}}"/>
+                </div>
+              </div>
+            </template>
+          </semantic-table>
+        </bs-col>
+      </bs-row>
+    
