@@ -93,6 +93,15 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of">
@@ -108,7 +117,7 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ActorRole"/>
     </owl:ObjectProperty>
     
 
@@ -152,6 +161,15 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by">
@@ -174,7 +192,10 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of -->
 
-    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of"/>
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
+    </owl:ObjectProperty>
     
 
 
@@ -233,6 +254,16 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at">
@@ -247,7 +278,6 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P94_has_created">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdfs:comment></rdfs:comment>
     </owl:ObjectProperty>
@@ -257,9 +287,8 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     <!-- http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by">
-        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
-        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:comment>4.5 Erzeugte digital Materialien. Welche digital Materialen/Medien/Objekte wurden im jeweiligen Entwicklungsprozess der digitalen Anwendung erzeugt/erstellt? z.B. Fotos, Filme, Texte, Audioaufnahmen, 3D Modelle etc</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -286,13 +315,12 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/generatedResource -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/fallsWithinResearchActivity -->
 
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/generatedResource">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of"/>
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/fallsWithinResearchActivity">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P10_falls_within"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
-        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
-        <rdfs:comment>5.6 entstandene Hilfsmittel. Welche Hilfsmittel sind im Zuge der Untersuchung entstanden? z.B. Fragebögen, Beobachtungsleitfäden etc.</rdfs:comment>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
     </owl:ObjectProperty>
     
 
@@ -317,22 +345,11 @@ Franziska Diehr for Stiftung Preußischer Kulturbesitz and museum4punkt0</rdfs:c
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasCreatedDocument -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasCreatedDocument">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P94_has_created"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasCreationMethod -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasCreationMethod">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
         <rdfs:comment xml:lang="de">4.3 Entwicklungsmethoden. Welche Methoden kamen bei der Entwicklung der digitalen Anwendung zum Einsatz?
 z.B.: Kreativ-Workshop, User Centred Design, (Paper-)Prototyping, Co-Creation Workshop, Digitalisierung (spezifischer: 3D-Streifenlichtscan, Digitalfotografie, Photogrammetrie), Software Entwicklung, Materialrecherche, Dokumentation in Sammlungsdokumentationsystem, Produzieren von Texten, Redaktion von kuratorischem Inhalt etc.</rdfs:comment>
@@ -389,7 +406,6 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Project"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
-        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#person"/>
         <rdfs:comment xml:lang="de">Mitarbeiter des Teilprojekts</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -400,6 +416,17 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasExperimenteeType">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasGeneratedTool -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasGeneratedTool">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
+        <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
+        <rdfs:comment>5.6 entstandene Hilfsmittel. Welche Hilfsmittel sind im Zuge der Untersuchung entstanden? z.B. Fragebögen, Beobachtungsleitfäden etc.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -452,22 +479,6 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDevice"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OutputDeviceType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasResearchAimCategory -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasResearchAimCategory">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
-        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
-        <rdfs:comment>5.2.1 Kategorisierung der Zielstellung. Bitte die in 5.2. beschriebene Zielstellung in übergeordnete Kategorie einordnen:
-
-    technologische Innovation
-    User Experience
-    User Interaction
-    Prove of Concept</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -661,7 +672,6 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usedAsset">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
         <rdfs:comment xml:lang="de">4.7 nachgenutzte Materialien. Auf welche bestehenden Materialen/Medien/Objekte und Vorarbeiten wurde zurückgegriffen/Welche wurden nachgenutzt? Ergebnisse die nicht im Projektkontext entstanden sind, aber hierfür genutzt wurden wie z.B. Digitalisate, Texte, Videos etc. Dies dient zur Identifikation ob Material Dritter in die Anwendung eingeflossen ist.</rdfs:comment>
     </owl:ObjectProperty>
@@ -672,7 +682,7 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usedHardware">
         <rdfs:subPropertyOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/usedTool"/>
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Hardware"/>
     </owl:ObjectProperty>
     
@@ -682,7 +692,7 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usedSoftware">
         <rdfs:subPropertyOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/usedTool"/>
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Software"/>
     </owl:ObjectProperty>
     
@@ -692,7 +702,7 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/usedTool">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
         <rdfs:range rdf:resource="http://www.idpluslab.de/idplus-ontology#tool"/>
         <rdfs:comment xml:lang="de">4.4 Programme/Geräte/Hilfsmittel. Welche Systeme/Programme, Geräte und/oder Hilfsmittel wurden für die Entwicklung der Anwendung genutzt? Hier abstrahieren, z.B. Game-Engine, 3D-Animationsprogramm, Sketchpad, Java-Entwicklungsumgebung, Videoschnittprogramm</rdfs:comment>
     </owl:ObjectProperty>
@@ -733,17 +743,6 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/wasCarriedOutDuringEvent -->
-
-    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/wasCarriedOutDuringEvent">
-        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P10_falls_within"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
-        <rdfs:comment>5.4 Anlass der Untersuchung. Gab es einen besonderen Anlass für die Untersuchung/des Testings? Wurde sie z.B. im Rahmen einer anderen Veranstaltung wie z.B. Lange Nacht der Museen/der Wissenschaften, einer Sonderausstellung durchgeführt?</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/wasDevelopedBy -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/wasDevelopedBy">
@@ -760,6 +759,16 @@ Mehrfachnennung möglich</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P10_falls_within"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Project"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Project"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/wasResearchedBy -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/wasResearchedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
     </owl:ObjectProperty>
     
 
@@ -941,11 +950,39 @@ Mehrfachnennung möglich</rdfs:comment>
     
 
 
+    <!-- https://schema.org/familyName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/familyName">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/givenName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/givenName">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://schema.org/image -->
 
     <owl:DatatypeProperty rdf:about="https://schema.org/image">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/legalName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/legalName">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -976,7 +1013,6 @@ z.B.: Erster Weltkrieg, Renaissance, 1914-1921, Kolonialzeit, Apollo 17 Mission<
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/descriptionOfCreationChallenges">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">4.2 Herausforderungen. Vor welchen Herausforderungen stand die Entwicklung der digitalen Anwendungen? Herausforderungen, Fragestellungen und Probleme benennen und beschreiben.
 
@@ -1031,6 +1067,16 @@ Je Methode aus 4.3 max. 200 Zeichen Beschreibung,</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/descriptionOfResearchSetting -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/descriptionOfResearchSetting">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/descriptionOfUserNeeds -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/descriptionOfUserNeeds">
@@ -1050,6 +1096,16 @@ Je Methode aus 4.3 max. 200 Zeichen Beschreibung,</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>1.1 Bezeichnung der Anwendung. Offizielle Bezeichnung der digitalen Anwendung (bzw. wenn nicht vorhanden den Arbeitstitel). Hier bitte alle bisherigen sowie geplanten Anwendungen aufführen.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/eventTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/eventTitle">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1150,16 +1206,6 @@ Angabe in Minuten! z.B. 8 Min.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
         <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/nameOrg -->
-
-    <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/nameOrg">
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Name der Organisation</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1415,7 +1461,6 @@ Beispiel:
     <!-- http://www.cidoc-crm.org/cidoc-crm/E65_Creation -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E65_Creation">
-        <owl:equivalentClass rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Development"/>
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
     </owl:Class>
     
@@ -1576,6 +1621,14 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/ActorRole -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ActorRole">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Adolescent -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Adolescent">
@@ -1628,14 +1681,6 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Beobachtung">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Betrieb -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Betrieb">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
     </owl:Class>
     
 
@@ -1726,14 +1771,6 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/DesignThinking">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Expertise"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Development -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Development">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
     </owl:Class>
     
 
@@ -2168,14 +2205,6 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Prove_of_Concept -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Prove_of_Concept">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
-    </owl:Class>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/QualityOfGeometryRes -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/QualityOfGeometryRes">
@@ -2195,17 +2224,7 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <!-- https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
     
 
 
@@ -2274,14 +2293,6 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Technologie -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Technologie">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
-    </owl:Class>
-    
-
-
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Technology -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Technology">
@@ -2319,22 +2330,6 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/UserApplication">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType"/>
         <rdfs:label xml:lang="de">Anwendersoftware</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/UserExperience -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/UserExperience">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/User_Interaction -->
-
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/User_Interaction">
-        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
     </owl:Class>
     
 
@@ -2596,37 +2591,6 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://www.iana.org/assignments/media-types/video/mpeg">
         <rdf:type rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ContentType"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CreationMethod"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ExperimenteeType"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Expertise"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/MediaType"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OutputDeviceType"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/QualityOfGeometryRes"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchAimCategory"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchMethod"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/TargetAudience"/>
-            <rdf:Description rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 

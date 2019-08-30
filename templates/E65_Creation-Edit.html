@@ -6,8 +6,9 @@
       </bs-row>
       <bs-row>
         <bs-col sm="3" sm-offset="2">
-          <semantic-query query="SELECT ?title WHERE {??  <https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle> ?title }" 
-          template="<p>DigitalApp:{{#each bindings}}{{digitalAppTitle.value}}{{/each}}</p>"></semantic-query>
+         <b>Name der Anwendung</b>
+          <semantic-query query="SELECT ?s ?title WHERE {?s  <https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle> ?title }" 
+          template="<p>{{title.title}}</p>"></semantic-query>
           <!--
           <semantic-query query="SELECT ?thumbnail WHERE {??  <http://schema.org/thumbnail> ?thumbnail }" template='{{#each bindings}}<img src="{{thumbnail.value}}">{{/each}}'></semantic-query>
           http://purl.org/dc/terms/
@@ -15,40 +16,44 @@
         </bs-col>
     
         <bs-col sm="3">
-          <b></b>
+            <b>Sourcecodedokumentation</b>
           <semantic-table
-                  query='SELECT ?doc ?label WHERE {?? <h>ttp://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in> ?doc. ?doc <http://schema.org/url> ?value}'
+                  query='SELECT ?s ?doc ?value WHERE {?s <http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in> ?doc. ?doc <http://schema.org/url> ?value}'
                   options='{"showFilter":false}'
                   tuple-template='{{> tupleTemplate}}'
           >
             <template id='tupleTemplate'>
               <div style="height: 250px; width: 250px; margin: 10px;" class="panel panel-default">         
                 <div class="panel-heading" style="overflow: hidden; text-overflow: ellipsis;">
-                  <semantic-link uri="{{friend.value}}">{{label.value}}</semantic-link>
+                  <semantic-link uri="{{value.value}}">{{label.value}}</semantic-link>
                 </div>
+                <!--
                 <div class="panel-body">
                   <img class="img-responsive img-thumbnail" style="max-height: 130px;display: block;margin-left:auto;margin-right:auto;" src="{{thumbnail.value}}"/>
                 </div>
+                -->
               </div>
             </template>
           </semantic-table>
         </bs-col>
     
         <bs-col sm="3">
-          <b>Interests</b>
+          <b>Geräte</b>
           <semantic-table
-                  query='SELECT ?topic ?label ?thumbnail WHERE { ?? <http://xmlns.com/foaf/0.1/topic_interest> ?topic. ?topic rdfs:label ?label; <http://schema.org/thumbnail> ?thumbnail }'
+                  query='SELECT ?device ?label WHERE { ?s <https://www.museum4punkt0.de/catalogue/ontology/usesOutputDevice> ?device. ?device <https://www.museum4punkt0.de/catalogue/ontology/toolTitle> ?label}'
                   options='{"showFilter":false}'
                   tuple-template='{{> tupleTemplate}}'
           >
             <template id='tupleTemplate'>
               <div style="height: 250px; width: 250px; margin: 10px;" class="panel panel-default">         
                 <div class="panel-heading" style="overflow: hidden; text-overflow: ellipsis;">
-                  <semantic-link uri="{{topic.value}}">{{label.value}}</semantic-link>
+                  <semantic-link uri="{{device.value}}">{{label.value}}</semantic-link>
                 </div>
+                <!--
                 <div class="panel-body">
                   <img class="img-responsive img-thumbnail" style="max-height: 130px;display: block;margin-left:auto;margin-right:auto;" src="{{thumbnail.value}}"/>
                 </div>
+                -->
               </div>
             </template>
           </semantic-table>

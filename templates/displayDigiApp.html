@@ -1,0 +1,54 @@
+<ol class="page-breadcrumb">
+        <li>
+          <mp-link title="Home" url="/">Home</mp-link>
+        </li>
+        <li class="active">
+          <mp-label iri='[[this]]'></mp-label>
+        </li>
+      </ol>
+   <div class="page rs-page">
+  <div class="page__header-navtabs">
+    [[> rsp:Header fc=fc fcLabel=fcLabel]]
+  </div>   
+  
+<bs-panel>
+        <h1>Digitale Anwendung</h1>
+        <semantic-context repository='default'>
+                <semantic-query query="SELECT ?s WHERE {?s rdf:type m4p0:DigitalApp }"
+              template='{{#each bindings}}<span class="badge">{{s.value}}</span>{{/each}}'>
+          
+          </semantic-query></semantic-context>
+        <bs-tabs fixed-key="form">
+
+        <bs-tab event-key="1" title="Grundinformationen">
+                <semantic-context repository='default'>
+                        <semantic-query query="SELECT ?s ?title WHERE {?s <https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle> ?title }"
+                      template='{{#each bindings}}<span class="badge">{{s.value}}</span>{{/each}}'>
+                  
+                  </semantic-query></semantic-context>
+        </bs-tab>
+<!--
+        <bs-tab-container>
+        <bs-nav bs-style="tabs">
+                <bs-nav-item event-key="1">Grundinformationen</bs-nav-item>
+ <semantic-context repository='assets'>
+                       <semantic-query query="SELECT ?s ?title WHERE {?s <https://www.museum4punkt0.de/catalogue/ontology/digitalAppTitle> ?title }"
+                     template='{{#each bindings}}<span class="badge">{{s.value}}</span>{{/each}}'>
+                 
+                 </semantic-query></semantic-context>
+
+                 <bs-nav-item event-key="2">Vermittlungskonzept             
+                 </bs-nav-item>
+                 
+               </bs-nav>
+
+
+
+
+      
+         
+          </bs-tab-container>
+   -->  
+
+</bs-tabs>
+</bs-panel>
