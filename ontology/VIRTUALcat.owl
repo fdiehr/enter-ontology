@@ -1445,7 +1445,9 @@ Beispiel:
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/E55_Type -->
 
-    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E55_Type">
+        <owl:equivalentClass rdf:resource="ttp://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
     
 
 
@@ -1702,6 +1704,14 @@ Werkzeuge sind physische und digitale Werkzeuge, die von Akteur_innen genutzt we
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Chatbot -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Chatbot">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist -->
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/CitizenScientist">
@@ -1912,6 +1922,14 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ImmersiveFormat">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/EducationFormat"/>
         <rdfs:label xml:lang="de">Immersives Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Installation -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Installation">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
     </owl:Class>
     
 
@@ -2224,7 +2242,9 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <!-- https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity"/>
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/ResearchActivity">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+    </owl:Class>
     
 
 
@@ -2358,9 +2378,9 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     
 
 
-    <!-- https://www.museum4punkt0.de/catalogue/ontology/Webanwendung -->
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/WebApp -->
 
-    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Webanwendung">
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/WebApp">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
     </owl:Class>
     
@@ -2378,6 +2398,14 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
 
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Webdevelopment">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Expertise"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/Website -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/Website">
+        <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Technology"/>
     </owl:Class>
     
 
@@ -2516,6 +2544,12 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/360GradFilm">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Film"/>
     </owl:Class>
+    
+
+
+    <!-- ttp://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="ttp://www.w3.org/2004/02/skos/core#Concept"/>
     
 
 
