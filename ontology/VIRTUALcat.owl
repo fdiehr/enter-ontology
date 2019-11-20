@@ -304,6 +304,26 @@ Franziska Diehr for museum4punkt0</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/codeIsDocumentedIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/codeIsDocumentedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/conceptIsDocumentedIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/conceptIsDocumentedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/fallsWithinAppCreation -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/fallsWithinAppCreation">
@@ -473,6 +493,16 @@ Es ist NICHT das Dateiformat gemeint!</rdfs:comment>
     
 
 
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/hasOperationalConcept -->
+
+    <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasOperationalConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.museum4punkt0.de/catalogue/ontology/hasOutputDeviceType -->
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasOutputDeviceType">
@@ -561,7 +591,7 @@ z.B. Probanden-Testing, Online Nutzerumfrage, Besucherbeobachtung, Besucherbefra
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/hasTouchpoints">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/Touchpoints"/>
         <rdfs:comment xml:lang="de">2.9  Über welche Kanäle wird der Nutzer auf die Anwendung aufmerksam? Über welche Kanäle ist sie auffindbar? Was sind die (digitalen) &quot;Touchpoints&quot; (Kundenkontaktpunkte)? z.B. Webpräsenz des Museums, Webpräsenz von Partnern/Partnerinstitutionen, Flyer, Plakate, Besucher-/Touristeninformation, App Store, Game Plattform, Social Media Plattform etc.
 Mehrfachnennung möglich!</rdfs:comment>
@@ -1134,7 +1164,7 @@ Je Methode aus 4.3 max. 200 Zeichen Beschreibung,</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/extentOfUsage">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/extent"/>
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">2.7.2 Empfohlene Nutzungsdauer der Anwendung in der Ausstellung. Sicherlich können Besucher die Anwendung auch kürzer oder länger nutzen, aber was ist eine gute Länge, um die Anwendung sinnvoll zu nutzen? (Insbesondere relevant für VR-Anwendungen, Spiele und Filme).
 
@@ -1385,7 +1415,7 @@ Beispiel:
     <!-- https://www.museum4punkt0.de/catalogue/ontology/visitorCare -->
 
     <owl:DatatypeProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/visitorCare">
-        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/DigitalApp"/>
+        <rdfs:domain rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="de">2.7.1 Empfohlener Betreuungsaufwand der Anwendung/der Station in der Ausstellung. Im Falle, dass die Anwendung in die Ausstellung integriert ist: Durch wieviel Personal sollten Besucher*innen optimalerweise betreut werden? (Dies bezieht sich insbesondere auf VR-Anwendungen, Spiele und Guides/Touren).</rdfs:comment>
     </owl:DatatypeProperty>
@@ -2145,6 +2175,14 @@ https://en.wikipedia.org/wiki/Head-mounted_display</rdfs:comment>
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem">
         <rdfs:subClassOf rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/SoftwareType"/>
         <rdfs:label xml:lang="de">Betriebssystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept -->
+
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/OperationalConcept">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure"/>
     </owl:Class>
     
 
