@@ -1,0 +1,29 @@
+### not working queries 
+INSERT { <https://enter.museum4punkt0.de/resources/DigitalApp/TEST1> rdf:about $value. $value a rdf:Class. rdf:class rdf:type m4p0:DigitalApp} WHERE {}
+
+INSERT { <https://enter.museum4punkt0.de/resources/DigitalApp/TEST1> rdf:about $value. $value rdf:type m4p0:DigitalApp} WHERE {}
+
+INSERT { <https://enter.museum4punkt0.de/resources/DigitalApp/TEST1> rdf:type $value. $value rdf:type m4p0:DigitalApp} WHERE {}
+###############
+
+
+
+
+
+
+##### die query funktioniert direkt im store, abe rnicht beim field generator mit $subject weil das $value fehlt
+INSERT { <https://enter.museum4punkt0.de/resources/DigitalApp/TEST1> rdf:type m4p0:DigitalApp} WHERE {}
+#####
+
+INSERT { <https://enter.museum4punkt0.de/resources/DigitalApp/TEST1> rdf:type $value. $value a m4p0:DigitalApp} WHERE {}
+
+
+#### funktioniert nicht im field generator 
+INSERT { $subject a $value. $value rdf:type m4p0:DigitalApp} WHERE {}
+
+INSERT { $subject a $value. $subject rdf:type m4p0:DigitalApp} WHERE {}
+
+
+##################
+
+SELECT * WHERE {?s rdf:type ?o}

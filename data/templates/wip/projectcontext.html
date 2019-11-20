@@ -1,0 +1,158 @@
+
+ <bs-panel>
+    <semantic-form new-subject-template='https://www.museum4punkt0.de/catalogue/ontology/{{UUID}}'
+        post-action='redirect'
+        browser-persistence=true
+        form-id='projectcontext'
+        fields='[
+        {
+         "id": "title",
+         "label": "Name des Projekts",
+         "minOccurs" : "1",
+         "xsdDatatype" : "xsd:string",
+         "domain" : [ "https://www.museum4punkt0.de/catalogue/ontology/Project" ],
+         "description" : "Der Name des geförderten Projekts",
+         "defaultValues" : ["museum4punkt0"],
+         "range" : [ ],
+         "maxOccurs" : "1",
+         "order" : "1",
+         "insertPattern" : 
+           "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+           INSERT {$subject m4p0:projectTitle $value} WHERE {}"
+        },  
+
+        {
+        "id": "funder",
+         "label": "Förderinstitution",
+         "xsdDatatype": "xsd:anyURI",
+         "domain" : [ "https://www.museum4punkt0.de/catalogue/ontology/Project" ],
+         "selectPattern": "
+                PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+                SELECT ?value WHERE { $subject m4p0:wasFundedBy ?value }"
+          },
+                
+        {
+            "id": "fundingBeginDate",
+            "label": "Beginn der Förderung",
+            "description": "Beginn des Förderzeitraums TT/MM/JJJJ"",
+            "xsdDatatype": "xsd:dateTime",
+            "minOccurs": "1",
+            "maxOccurs": "1",
+            "selectPattern": 
+            "PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+              m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              SELECT ?value WHERE {
+                $subject m4p0:wasFundedBy ?funding.
+                ?funding m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_begin_of_the_begin ?value
+              }",
+            "insertPattern": 
+            "PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+              m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              INSERT {
+                $subject m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_begin_of_the_begin $value
+              } WHERE {
+                BIND(IRI(CONCAT(STR(?subject), \"/funding\")) as ?funding).
+                BIND(IRI(CONCAT(STR(?subject), \"/funding/date\")) as ?fundingDate).
+              }",
+            "deletePattern": 
+                "PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+              m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              DELETE {
+                $subject m4p0:wasFundedBy ?funding.
+                ?funding m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_begin_of_the_begin ?date
+              } WHERE {
+                $subject 4p0:wasFundedBy ?funding.
+                ?funding m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_begin_of_the_begin $value.
+                ?acquisitionDate crm:P82a_begin_of_the_begin ?date.
+              }"
+        },
+        {
+            "id": "fundingEndDate",
+            "label": "Ende des Förderzeitraumes TT/MM/JJJJ",
+            "description": "",
+            "xsdDatatype": "xsd:dateTime",
+            "minOccurs": "1",
+            "maxOccurs": "1",
+            "selectPattern": "
+              PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+              m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              SELECT ?value WHERE {
+                $subject m4p0:wasFundedBy ?funding.
+                ?funding m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_end_of_the_end ?value
+              }",
+            "insertPattern": 
+            " PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+              m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              INSERT {
+                $subject cm4p0:wasFundedBy ?funding.
+                ?funding m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_end_of_the_end  $value
+              } WHERE {
+                BIND(IRI(CONCAT(STR(?subject), \"/funding\")) as ?funding).
+                BIND(IRI(CONCAT(STR(?subject), \"/funding/date\")) as ?fundingDate).
+              }",
+            "deletePattern": 
+            "PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+              m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              DELETE {
+                $subject m4p0:wasFundedBy ?funding.
+                ?funding m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_end_of_the_end ?date
+              } WHERE {
+                $subject m4p0:wasFundedBy ?funding.
+                ?funding m4p0:hadFundingTimeSpan ?fundingDate.
+                ?fundingDate crm:P82a_end_of_the_end $value.
+                ?fundingDate crm:P82a_end_of_the_end  ?date.
+              }"
+        }
+          ]'>
+        </semantic-form>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+          <semantic-form-text-input for="title"></semantic-form-text-input>
+          <semantic-form-datetime-input for="fundingBeginDate"></semantic-form-datetime-input>
+          <semantic-form-datetime-input for="fundingEndDate"></semantic-form-datetime-input>
+          <semantic-form-composite-input for="funder" new-subject-template="funder/{{id}}" fields='[
+            {
+              "id": "namefunder",
+              "label": "Name der Förderinstitution",
+              "xsdDatatype": "xsd:string",
+              "domain" : ["http://www.cidoc-crm.org/cidoc-crm/E74_Group"],
+              "description" : "Website der Förderinstitution",
+              "defaultValues" : ["Bundesbeauftragte für Kultur und Medien"],
+              "minOccurs": "1",
+              "maxOccurs": "1",
+              "insertPattern": 
+              "PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              INSERT ?value WHERE { $subject m4p0:nameOrg ?value 
+                                                                                                   }",
+              
+            },
+            {
+              "id": "urlfunder",
+              "label": "Website",
+              "xsdDatatype": "xsd:anyURI",
+              "domain" : ["http://www.cidoc-crm.org/cidoc-crm/E74_Group"],
+              "description" : "Website der Förderinstitution",
+              "defaultValues" : [],
+              "range" : [ ],
+              "minOccurs": "0",
+              "maxOccurs": "unbound",
+              "insertPattern": "
+              PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+              INSERT INSERT {$subject m4p0:urlOrg $value} WHERE {}"
+            }
+          ]'>
+          <semantic-form-text-input for="namefunder"></semantic-form-text-input>
+            <semantic-form-text-input for="urlfunder"></semantic-form-text-input>           
+          </semantic-form-composite-input>
+          <semantic-form-errors></semantic-form-errors>
+          <!-- save and reset button for form -->
+          <button name="submit" class="btn btn-default">Save</button>
+          <button name="reset" class="btn btn-default">Reset</button>
+    </semantic-form>
+</bs-panel>

@@ -1,0 +1,74 @@
+http://www.researchspace.org/resource/DigitalApp:787:34: java.lang.IllegalArgumentException: Malformed Query in "fieldDefinitions" template helper: "PREFIX field: <http://www.metaphacts.com/ontology/fields#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sp: <http://spinrdf.org/sp#>
+SELECT DISTINCT ?id
+(SAMPLE(?description) AS ?description)
+(SAMPLE(?minOccurs) AS ?minOccurs)
+(SAMPLE(?maxOccurs) AS ?maxOccurs)
+(STRDT(
+IF(COUNT(?defaultValue) > 0,
+CONCAT("[\"",
+GROUP_CONCAT(?defaultValue; separator="\", \""),
+"\"]"
+),
+"[]"
+),
+<http://www.metaphacts.com/ontologies/platform#syntheticJson>
+) AS ?defaultValues)
+(STRDT(
+IF(COUNT(?domain) > 0,
+CONCAT("[\"",
+GROUP_CONCAT(?domain; separator="\", \""),
+"\"]"
+),
+"[]"
+),
+<http://www.metaphacts.com/ontologies/platform#syntheticJson>
+) AS ?domain)
+(SAMPLE(?xsdDatatype) AS ?xsdDatatype)
+(STRDT(
+IF(COUNT(?range) > 0,
+CONCAT("[\"",
+GROUP_CONCAT(?range; separator="\", \""),
+"\"]"
+),
+"[]"
+),
+<http://www.metaphacts.com/ontologies/platform#syntheticJson>
+) AS ?range)
+(SAMPLE(?insertPattern) AS ?insertPattern)
+(SAMPLE(?deletePattern) AS ?deletePattern)
+(SAMPLE(?selectPattern) AS ?selectPattern)
+(SAMPLE(?askPattern) AS ?askPattern)
+(SAMPLE(?autosuggestionPattern) AS ?autosuggestionPattern)
+(SAMPLE(?valueSetPattern) AS ?valueSetPattern)
+(SAMPLE(?treePatterns) AS ?treePatterns)
+(SAMPLE(?order) as ?order)
+(SAMPLE(?iri) as ?iri)
+WHERE {
+<http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains> ?field.
+?field a field:Field.
+?field field:insertPattern [ sp:text ?insertPattern].
+OPTIONAL{?field field:selectPattern [ sp:text ?selectPattern]}.
+OPTIONAL{?field field:deletePattern [ sp:text ?deletePattern]}.
+OPTIONAL{?field field:valueSetPattern [ sp:text ?valueSetPattern]}.
+OPTIONAL{?field field:autosuggestionPattern [ sp:text ?autosuggestionPattern]}.
+OPTIONAL{?field field:minOccurs ?minOccurs.}.
+OPTIONAL{?field field:domain ?domain.}.
+OPTIONAL{?field field:xsdDatatype ?xsdDatatype.}.
+OPTIONAL{?field field:range ?range.}.
+OPTIONAL{?field field:maxOccurs ?maxOccurs.}.
+OPTIONAL { ?field field:defaultValue ?defaultValue . } .
+OPTIONAL{?field rdfs:comment ?description.}.
+OPTIONAL{?field field:askPattern [ sp:text ?askPattern]}.
+OPTIONAL { ?field field:treePatterns ?treePatterns }
+VALUES (?field ?alias ?order){(<> "orgName" 0)(<> "P74_has_current_or_former_residence" 1)}
+BIND(COALESCE(?alias, ?field) as ?id)
+BIND(?field as ?iri)
+}
+GROUP BY ?id
+ORDER BY ?order ?id" .
+Details: Not a valid (absolute) IRI:
+http://www.researchspace.org/resource/DigitalApp:787:34
+
+Platform by ResearchSpace and metaphacts platform 

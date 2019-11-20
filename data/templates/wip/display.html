@@ -1,0 +1,25 @@
+<semantic-table query="  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+    
+    }"
+column-configuration='[]'></semantic-table>
+
+
+<semantic-table query="
+  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+  PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+  SELECT ?s ?apptitle ?device ?tooltitle ?type ?prefLabel WHERE 
+  {?s  m4p0:digitalAppTitle ?apptitle.  ?s m4p0:usesOutputDevice ?device. ?device m4p0:toolTitle ?tooltitle. ?device m4p0:hasOutputDeviceType ?type. ?type skos:prefLabel ?prefLabel. }
+      " 
+      column-configuration='[
+    {"variableName": "device", "displayName": "Ausspielgerät"}, 
+    {"variableName": "type", "displayName": "Gerätetyp"} 
+    
+   
+  ]'>
+</semantic-table>
+{"variableName": "type", "displayName": "Gerätetyp"}

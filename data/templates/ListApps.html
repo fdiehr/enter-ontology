@@ -1,0 +1,27 @@
+
+<bs-panel>
+    <h1>Digitale Anwendungen</h1>
+
+    <div class="gap">
+        <semantic-link
+            uri=':digitalApp'
+        >
+            <button>Add new Digital App</button>
+        </semantic-link>
+    </div>
+
+    <div class="gap">
+        <semantic-table
+            query='SELECT * WHERE {
+                ?subject a m4p0:digitalApp ;
+                m4p0:digitalAppTitle ?app_title .
+            }'
+            column-configuration='[
+            {
+                "variableName": "subject",
+                "displayName": "Bezeichnung der digitalen Anwendung"
+            }]'
+        ></semantic-table>
+    </div>
+</bs-panel>
+

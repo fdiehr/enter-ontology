@@ -1,0 +1,107 @@
+
+<bs-panel>
+    <h1>Digitale Anwendung</h1>
+
+    <h2>Grundinformationen</h2>
+
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/digitalAppTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/shortTitle']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasTechnologyType']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasMaturityLevel']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasAreaOfUse']]
+    
+    <semantic-link
+        uri=':DigitalApp'
+        urlqueryparam-app='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+    <h3>Sourcecode der digitalen Anwendung</h3>
+
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn']]
+
+    <semantic-link
+        uri=':DigitalApp'
+        urlqueryparam-app='[[this]]'
+        urlqueryparam-tab='1'
+    >
+        <button>Edit</button>
+    </semantic-link>
+
+    <h2>Vermittlungskonzept</h2>
+
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasEducationalConcept']]
+
+    <semantic-link
+        uri=':DigitalApp'
+        urlqueryparam-app='[[this]]'
+        urlqueryparam-tab='2'
+    >
+        <button>Edit</button>
+    </semantic-link>
+
+    <h2>Betrieb</h2>
+    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasOperationalConcept']]
+    <!--
+    <h3>Betreuung</h3>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/visitorCare']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/extentOfUsage']]
+        <h3>Vermarktung</h3>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasTouchpoints']]
+
+    <semantic-link
+        uri=':DigitalApp'
+        urlqueryparam-app='[[this]]'
+        urlqueryparam-tab='3'
+    >
+        <button>Edit</button>
+    </semantic-link>
+    -->
+<h2>Geräte und Software</h2>
+<h3>Ausspielgeräte</h3>
+[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usesOutputDevice']]
+<h3>benötigte periphere Hardware</h3>
+[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usesHardware']]
+<h3>benötigte Software</h3>
+[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usesSoftware']]
+
+<semantic-link
+uri=':DigitalApp'
+urlqueryparam-app='[[this]]'
+urlqueryparam-tab='4'
+>
+<button>Edit</button>
+</semantic-link>
+
+<h2>Entwicklung</h2>
+[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/P94i_was_created_by']]
+<semantic-link
+uri=':DigitalApp'
+urlqueryparam-app='[[this]]'
+urlqueryparam-tab='5'
+>
+<button>Edit</button>
+</semantic-link>
+
+<h2>Beforschung</h2>
+[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/wasResearchedBy']]
+<semantic-link
+uri=':DigitalApp'
+urlqueryparam-app='[[this]]'
+urlqueryparam-tab='6'
+>
+<button>Edit</button>
+</semantic-link>
+
+<h2>Projektkontext</h2>
+[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/wasDevelopedBy']]
+<semantic-link
+uri=':DigitalApp'
+urlqueryparam-app='[[this]]'
+urlqueryparam-tab='7'
+>
+<button>Edit</button>
+</semantic-link>
+
+</bs-panel>
