@@ -227,17 +227,26 @@
                         ]]">
                                      
                     <semantic-form-composite-input for="conceptIsDocumentedIn"
-                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
-                        fields="[[fieldDefinitions]]">
+                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{documentTitle}}"
+                        fields="[[fieldDefinitions
+                        documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+                        documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+                        url='http://www.metaphacts.com/fieldDefinition/url'
+                        doi='http://www.metaphacts.com/fieldDefinition/doi'
+                        bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
+                        ]]">
                         <h3>Link zu Zenodo</h3>
                         <p>Geben Sie hier den Link zum Dokument in Zenodo an. Bei Zenodo wird Ihnen eine stabile URL
                             angezeigt, die Sie hier verwenden sollten. Dort befindet sich auch die
                             bibliographische Angabe, die Sie hier verwenden sollten.</p>
-                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
+                        <semantic-form-hidden-input for="documentRdfType"></semantic-form-hidden-input>
+                        <semantic-form-text-input for="documentTitle">
                         </semantic-form-text-input>
-                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/doi">
+                        <semantic-form-text-input for="url">
                         </semantic-form-text-input>
-                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation"
+                        <semantic-form-text-input for="doi">
+                        </semantic-form-text-input>
+                        <semantic-form-text-input for="bibliographicCitation"
                             multiline=true>
                         </semantic-form-text-input>
                     </semantic-form-composite-input>
@@ -475,7 +484,6 @@
                                                     inSchemeExpertise='http://www.metaphacts.com/fieldDefinition/inSchemeExpertise'    
                                                     prefLabel='http://www.metaphacts.com/fieldDefinition/prefLabel'
                                                     altLabel='http://www.metaphacts.com/fieldDefinition/altLabel'
-                                                    broaderExpertise='http://www.metaphacts.com/fieldDefinition/broaderExpertise'                  
                                                         ]]">
                                     <semantic-form-hidden-input for="inSchemeExpertise" default-value='skos:Concept'>
                                     </semantic-form-hidden-input>
@@ -483,9 +491,7 @@
                                         require-language=true>
                                     </semantic-form-text-input>
                                     <semantic-form-text-input for="altLabel" languages='["de", "en"]' require-language=true>
-                                    </semantic-form-text-input>
-                                    <semantic-form-tree-picker-input for="broaderExpertise">
-                                    </semantic-form-tree-picker-input>
+                                    </semantic-form-text-input>                                  
     
                                     <semantic-form-errors></semantic-form-errors>
                                     <button name='submit' class='btn btn-default'>Create</button>
@@ -538,9 +544,11 @@
                                 <semantic-form-select-input for="hasSoftwareType">
                                 </semantic-form-select-input>
                                 <semantic-form-composite-input for="softwareIsDocumentedIn"
-                                    new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                                new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{documentTitle}}"
                                     fields="[[fieldDefinitions]]">
                                     <h4>Quelle der Software</h4>
+                                    <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType"></semantic-form-hidden-input>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle"></semantic-form-text-input>
                                     <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
                                     </semantic-form-text-input>
                                  
@@ -582,9 +590,11 @@
         </semantic-form-tree-picker-input>
     
         <semantic-form-composite-input for="toolIsDocumentedIn"
-            new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{documentTitle}}"
             fields="[[fieldDefinitions]]">
             <h4>Quelle des Hilfsmittels</h4>
+            <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType"></semantic-form-hidden-input>
+            <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle"></semantic-form-text-input>
             <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
             </semantic-form-text-input>
             <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/doi">
@@ -775,9 +785,11 @@
                         <semantic-form-select-input for="hasSoftwareType">
                         </semantic-form-select-input>
                         <semantic-form-composite-input for="softwareIsDocumentedIn"
-                            new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{documentTitle}}"
                             fields="[[fieldDefinitions]]">
                             <h4>Quelle der Software</h4>
+                            <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType"></semantic-form-hidden-input>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle"></semantic-form-text-input>
                             <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
                             </semantic-form-text-input>
                           
@@ -819,9 +831,11 @@
                         </semantic-form-tree-picker-input>
     
                         <semantic-form-composite-input for="toolIsDocumentedIn"
-                            new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{documentTitle}}"
                             fields="[[fieldDefinitions]]">
                             <h4>Quelle des Hilfsmittels</h4>
+                            <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType"></semantic-form-hidden-input>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle"></semantic-form-text-input>
                             <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/bibliographicCitation"
                                 multiline=true>
                             </semantic-form-text-input>
@@ -867,9 +881,11 @@
                     </semantic-form-tree-picker-input>
     
                     <semantic-form-composite-input for="toolIsDocumentedIn"
-                        new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}"
+                    new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{documentTitle}}"
                         fields="[[fieldDefinitions]]">
                         <h4>Quelle des Hilfsmittels</h4>
+                        <semantic-form-hidden-input for="http://www.metaphacts.com/fieldDefinition/documentRdfType"></semantic-form-hidden-input>
+                        <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/documentTitle"></semantic-form-text-input>
                         <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/url">
                         </semantic-form-text-input>
                         <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/doi">
@@ -884,12 +900,16 @@
                 <h2>Erkenntnisse</h2>
                 <p>Geben Sie hier an, welche Publikationen aus der begleitenden Forschung hervorgegangen sind.</p>
                 <semantic-form-composite-input for='researchIsDocumentedIn'
-                    new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
-                                            url='http://www.metaphacts.com/fieldDefinition/url'
+                    new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{documentTitle}}" fields="[[fieldDefinitions
+                    documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'   
+                    documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+                    url='http://www.metaphacts.com/fieldDefinition/url'
                                             doi='http://www.metaphacts.com/fieldDefinition/doi'
                                             bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
                                             ]]">                                        
-                    <semantic-form-text-input for="url">
+                     <semantic-form-hidden-input for="documentRdfType"></semantic-form-hidden-input>
+                     <semantic-form-text-input for=" documentTitle"></semantic-form-text-input>
+                      <semantic-form-text-input for="url">
                     </semantic-form-text-input>
                     <semantic-form-text-input for="doi">
                     </semantic-form-text-input>
@@ -949,6 +969,9 @@
                     legalName='http://www.metaphacts.com/fieldDefinition/legalName'
                     ]]">
                         <semantic-form-text-input for="legalName"></semantic-form-text-input>
+                        <semantic-form-errors></semantic-form-errors>
+                        <button name='submit' class='btn btn-default'>Create</button>
+                        <button name='reset' class='btn btn-default'>Reset</button>
                     </semantic-form>
                 </semantic-form-autocomplete-input>
                 <semantic-form-autocomplete-input for="wasPartOfProject">
