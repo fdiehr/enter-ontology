@@ -17,23 +17,13 @@
       {{#each field.values as |value|}}
       <dd>
         <mp-field-visualization subject="{{value.value.value}}" fields="[[fieldDefinitions 
+                  
                   url='http://www.metaphacts.com/fieldDefinition/url'
                   doi='http://www.metaphacts.com/fieldDefinition/doi'
                   bibliographicCitation='http://www.metaphacts.com/fieldDefinition/bibliographicCitation'
-                  
-                  descriptionOfEducationalGoal='http://www.metaphacts.com/fieldDefinition/descriptionOfEducationalGoal'
-                  descriptionOfNarration='http://www.metaphacts.com/fieldDefinition/descriptionOfNarration'
-                  descriptionOfUserNeeds='http://www.metaphacts.com/fieldDefinition/descriptionOfUserNeeds'
-                  hasEducationFormat='http://www.metaphacts.com/fieldDefinition/hasEducationFormat'
-                  hasSubject='http://www.metaphacts.com/fieldDefinition/hasSubject'               
-                  hasTargetAudience='http://www.metaphacts.com/fieldDefinition/hasTargetAudience'
-                  
                   conceptIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/conceptIsDocumentedIn'
-                  visitorCare='http://www.metaphacts.com/fieldDefinition/visitorCare'
-                  extentOfUsage='http://www.metaphacts.com/fieldDefinition/extentOfUsage'
-                  hasTouchpoints='http://www.metaphacts.com/fieldDefinition/hasTouchpoints'            
-                  
-                  hasOutputDeviceType='http://www.metaphacts.com/fieldDefinition/hasOutputDeviceType'
+                  researchIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/researchIsDocumentedIn'     
+                 
                   title='http://www.metaphacts.com/fieldDefinition/toolTitle'
                   modelNr='http://www.metaphacts.com/fieldDefinition/modelNr'
                   needsPermanentInternetAccess='http://www.metaphacts.com/fieldDefinition/needsPermanentInternetAccess'
@@ -41,30 +31,14 @@
                   requiredRAM='http://www.metaphacts.com/fieldDefinition/requiredRAM'
                   requiredHardDriveSpace='http://www.metaphacts.com/fieldDefinition/requiredHardDriveSpace'
                   requiredGraphicsCard='http://www.metaphacts.com/fieldDefinition/requiredGraphicsCard'
-                
+                  
                   version='http://www.metaphacts.com/fieldDefinition/version'
+                  hasToolType='http://www.metaphacts.com/fieldDefinition/hasToolType'
                   hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
-
-                  descriptionOfCreationChallenges='http://www.metaphacts.com/fieldDefinition/descriptionOfCreationChallenges'
-                  beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
-                  endDate='http://www.metaphacts.com/fieldDefinition/endDate'
-                  fallsWithinAppCreation='http://www.metaphacts.com/fieldDefinition/fallsWithinAppCreation'
-
-                  descriptionOfResearchAim='http://www.metaphacts.com/fieldDefinition/descriptionOfResearchAim'
-                  hasGeneratedTool='http://www.metaphacts.com/fieldDefinition/hasGeneratedTool'
-                  researchIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/researchIsDocumentedIn'
-                  fallsWithinResearchActivity='http://www.metaphacts.com/fieldDefinition/fallsWithinResearchActivity'
-
-                  projectTitle='http://www.metaphacts.com/fieldDefinition/projectTitle'
-                  beginDate='http://www.metaphacts.com/fieldDefinition/beginDate'
-                  endDate='http://www.metaphacts.com/fieldDefinition/endDate'
-                  hasInsitutionalSupport='http://www.metaphacts.com/fieldDefinition/hasInsitutionalSupport'
-                  hasEmployee='http://www.metaphacts.com/fieldDefinition/hasEmployee'
-                  wasPartOfProject='http://www.metaphacts.com/fieldDefinition/wasPartOfProject'
-                  wasFundedBy='http://www.metaphacts.com/fieldDefinition/wasFundedBy'
-
+                  softwareIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/softwareIsDocumentedIn'
+                  toolIsDocumentedIn='http://www.metaphacts.com/fieldDefinition/toolIsDocumentedIn'
                   
-                  
+                                  
                 ]]" template="<bs-panel>{{> :fieldVisualisationTemplate}}</bs-panel>">
       </dd>
       {{/each}}
