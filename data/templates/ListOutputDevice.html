@@ -1,18 +1,18 @@
 
 <bs-panel>
-        <h1>Entwicklungsschritte</h1>
+        <h1>Ausspielgeräte</h1>
    
         <div class="gap">
             <semantic-link
-                uri=':E65_Creation'
+                uri=':OutputDevice'
             >
-                <button>neuen Entwicklungsschritt hinzufügen</button>
+                <button>Neu</button>
             </semantic-link>
         </div>
         <div class="gap">
             <semantic-table
                 query='SELECT * WHERE {
-                    $Entwicklungsschritt m4p0:hasCreatedDigitalApp ?DigitaleAnwendung. 
+                    $OutputDevice m4p0:toolTitle ?label. 
                     
                 }'
             

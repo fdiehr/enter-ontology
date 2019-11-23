@@ -10,18 +10,14 @@
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasMaturityLevel']]
     [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasAreaOfUse']]
     
-    <semantic-link
-        uri=':DigitalApp'
-        urlqueryparam-app='[[this]]'
-        urlqueryparam-tab='1'
-    >
-        <button>Edit</button>
-    </semantic-link>
-
+    <h3>Gesamtentwicklungszeitraum</h3>
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/beginDate']]
+    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/endDate']]
+    
     <h3>Sourcecode der digitalen Anwendung</h3>
 
     [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/codeIsDocumentedIn']]
-
+   
     <semantic-link
         uri=':DigitalApp'
         urlqueryparam-app='[[this]]'
@@ -30,16 +26,7 @@
         <button>Edit</button>
     </semantic-link>
 
-<h3>Gesamtentwicklungszeitraum</h3>
-[[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/beginDate']]
-[[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/endDate']]
-<semantic-link
-uri=':DigitalApp'
-urlqueryparam-app='[[this]]'
-urlqueryparam-tab='1'
->
-<button>Edit</button>
-</semantic-link>
+
 <!--
 <h2>Entwicklungsschritte</h2>
 
@@ -58,37 +45,6 @@ urlqueryparam-tab='1'
 -->
 <!-- Die Query hier stimmt nicht. Er soll nur die Instanzen von E65_Creation anzeigen, die mit der aktuellen angezeigten DigitalApp verbunden sind.  -->
 
-    <h2>Betrieb, Betreuung, Vermarktung</h2>
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/visitorCare']]
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/extentOfUsage']]
-
-    [[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in']]
-
-    [[> :fieldVisualisation field='http://www.metaphacts.com/fieldDefinition/hasTouchpoints']]
-     
-    <semantic-link
-        uri=':DigitalApp'
-        urlqueryparam-app='[[this]]'
-        urlqueryparam-tab='4'
-    >
-        <button>Edit</button>
-    </semantic-link>
-    
-<h2>Geräte und Software</h2>
-<h3>Ausspielgeräte</h3>
-[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usesOutputDevice']]
-<h3>benötigte periphere Hardware</h3>
-[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usesHardware']]
-<h3>benötigte Software</h3>
-[[> :compositeFieldVisualisation field='http://www.metaphacts.com/fieldDefinition/usesSoftware']]
-
-<semantic-link
-uri=':DigitalApp'
-urlqueryparam-app='[[this]]'
-urlqueryparam-tab='5'
->
-<button>Edit</button>
-</semantic-link>
 
 
 
