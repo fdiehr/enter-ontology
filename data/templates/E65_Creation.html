@@ -78,45 +78,14 @@
             </semantic-form>
         </semantic-form-tree-picker-input>
 
-        <h3>genutzte Software</h3>
+      
 
-        <semantic-form-autocomplete-input for="usedSoftware">
-            <semantic-form new-subject-template="https://www.enter.theninja.space/resources/Software/{{toolTitle}}"
-                fields="[[fieldDefinitions 
-                                        toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
-                                        version='http://www.metaphacts.com/fieldDefinition/version'
-                                        hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
-                                        P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
-                                        ]]">
-                <semantic-form-text-input for="toolTitle">
-                </semantic-form-text-input>
-                <semantic-form-text-input for="version">
-                </semantic-form-text-input>
-                <semantic-form-select-input for="hasSoftwareType">
-                </semantic-form-select-input>
-                <semantic-form-composite-input for="P70i_is_documented_in"
-                    new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
-                    documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
-                    documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
-                    url='http://www.metaphacts.com/fieldDefinition/url'
-                    ]]">
-                    <h4>Quelle</h4>
-                    <semantic-form-hidden-input for="documentRdfType">
-                    </semantic-form-hidden-input>
-                    <semantic-form-text-input for="documentTitle">
-                    </semantic-form-text-input>
-                    <semantic-form-text-input for="url">
-                    </semantic-form-text-input>
-                </semantic-form-composite-input>
-                <semantic-form-errors></semantic-form-errors>
-                <button name='submit' class='btn btn-default'>Create</button>
-                <button name='reset' class='btn btn-default'>Reset</button>
-            </semantic-form>
-        </semantic-form-autocomplete-input>
-
-
-        <h3>genutze Hilfsmittel</h3>
-
+        <h3>genutze Hilfsmittel und Geräte</h3>
+<p>Bei der Entwicklung digitaler Anwendungen können verschiedene Hilfsmittel und Geräte zum Einsatz kommen. Für das Scannen von 3D-Digitalisaten
+    wird bspw. ein Streifenlichtsscanner benötigt, für das Drehen von 360°-Filmen ein spezielles Kamera-Rig. Aber auch Literatur oder Archivmaterialien
+    sind mögliche Hilfsmittel, die während der Recherchephase genutzt wurden. </br>
+    Geben Sie hier Hilfsmittel und Geräte an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kamen.
+</p>
         <semantic-form-autocomplete-input for="usedTool">
             <semantic-form new-subject-template="https://www.enter.theninja.space/resources/Tool/{{toolTitle}}" fields="[[fieldDefinitions 
                                     toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
@@ -192,6 +161,44 @@
     </semantic-form-composite-input>
 -->
 
+<h3>genutzte Software</h3>
+ <p>Auch verschiedene Software kann bei der Entwicklung digitaler Anwendungen zum Einsatz kommen wie z.B. Programme zum Erstellen von 3D-Modellen oder 
+Videoschnitt- und Bildbearbeitungsprogramme.</br>
+Geben Sie hier Software an, die während des hier beschriebenen Entwicklungsschritts zum Einsatz kam.
+ </p>      
+<semantic-form-autocomplete-input for="usedSoftware">
+    <semantic-form new-subject-template="https://www.enter.theninja.space/resources/Software/{{toolTitle}}"
+        fields="[[fieldDefinitions 
+                                toolTitle='http://www.metaphacts.com/fieldDefinition/toolTitle'
+                                version='http://www.metaphacts.com/fieldDefinition/version'
+                                hasSoftwareType='http://www.metaphacts.com/fieldDefinition/hasSoftwareType'
+                                P70i_is_documented_in='http://www.metaphacts.com/fieldDefinition/P70i_is_documented_in'
+                                ]]">
+        <semantic-form-text-input for="toolTitle">
+        </semantic-form-text-input>
+        <semantic-form-text-input for="version">
+        </semantic-form-text-input>
+        <semantic-form-select-input for="hasSoftwareType">
+        </semantic-form-select-input>
+        <semantic-form-composite-input for="P70i_is_documented_in"
+            new-subject-template="https://www.enter.theninja.space/resources/E31_Document/{{UUID}}" fields="[[fieldDefinitions
+            documentRdfType='http://www.metaphacts.com/fieldDefinition/documentRdfType'
+            documentTitle='http://www.metaphacts.com/fieldDefinition/documentTitle'
+            url='http://www.metaphacts.com/fieldDefinition/url'
+            ]]">
+            <h4>Quelle</h4>
+            <semantic-form-hidden-input for="documentRdfType">
+            </semantic-form-hidden-input>
+            <semantic-form-text-input for="documentTitle">
+            </semantic-form-text-input>
+            <semantic-form-text-input for="url">
+            </semantic-form-text-input>
+        </semantic-form-composite-input>
+        <semantic-form-errors></semantic-form-errors>
+        <button name='submit' class='btn btn-default'>Create</button>
+        <button name='reset' class='btn btn-default'>Reset</button>
+    </semantic-form>
+</semantic-form-autocomplete-input>
 
         <semantic-form-errors></semantic-form-errors>
         <semantic-form-recover-notification></semantic-form-recover-notification>

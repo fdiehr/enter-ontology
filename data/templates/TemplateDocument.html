@@ -15,5 +15,28 @@
     >
         <button>Edit</button>
     </semantic-link>
-
+<!--
+    <semantic-query 
+  query='
+    SELECT ?x WHERE {  
+    ?x crm:P70i_is_documented_in ?Quelle.   
+    }
+  ' 
+  template='{{> template}}'
+  style='display: inline;'
+>
+  <template id='template'>
+    <div>
+      Das ist die Quelle folgender Resource:
+      {{#each bindings}} 
+        {{#if @first}} {{else}} {{#if @last}} and {{else}}, {{/if}} {{/if}}
+        <semantic-link uri="{{x.value}}">
+          {{x.value}}
+        </semantic-link>
+        
+      {{/each}} 
+    </div>
+  </template>
+</semantic-query>
+-->
 </bs-panel>
