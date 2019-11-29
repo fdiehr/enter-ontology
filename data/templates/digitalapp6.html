@@ -235,20 +235,24 @@
     #####                                   ##### 
     #############################################
     
-                
+              -->   
         <bs-tab event-key="8" title="Assets">
-            <h2>Digitale Objekte</h2>
-          
-                        <semantic-form-select-input
-                            for="http://www.researchspace.org/instances/fields/userGeneratedContentType">
-                        </semantic-form-select-input>
-                        -->
+           
+                <h2>Digitale Objekte</h2>
+                <p>Nutzen Sie folgendes Formular, um digitale Objekte hinzuzufügen. 
+                Speichern Sie vorher!</p>
+                    <semantic-link-container uri=":digiObj" target=_blank>
+                            <button class="btn btn-default">Edit</button>
+                          </semantic-link-container>
+        
+                   
 
 
     <semantic-form-errors></semantic-form-errors>
     <semantic-form-recover-notification></semantic-form-recover-notification>
     <button name="submit" class="btn btn-default">Save</button>
     <button name="reset" class="btn btn-default">Reset</button>
+</bs-tab> 
     <!--
                      <button name="save-state">Export</button>
               <button name="load-state">Import</button>

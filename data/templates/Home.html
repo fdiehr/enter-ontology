@@ -1,0 +1,79 @@
+<!--
+<ol class="page-breadcrumb">
+  [[> Partial:breadcrumb iri=":Start" label="Home"]]
+</ol>
+
+<div class="content">
+  <bs-col sm=12 md=10 md-offset=1>
+
+    [[> Partial:pageHeader custom="<h1>enter.museum4punkt0.de</h1>
+    <h2>Katalog der digitalen Anwendungen für die museale Vermittlung</h2>"]]
+
+    [[#> Partial:simpleSearch]]
+    VALUES (?type) {
+    (:DigitalApp)
+    (:E21_Person)
+    (:E74_Group)
+    (ismi:Witness)
+    }
+    [[/ Partial:simpleSearch]]
+
+  </bs-col>
+  -->
+  <bs-col sm=12 md=10 md-offset=1 class="gap">
+    <bs-row>
+      <bs-col sm=12 md=6>
+        <div class="panel">
+          <div class="panel-body">
+            <p>Listen</p>
+            <semantic-link-container uri=":ListApps" target=_blank>
+              <button class="btn btn-default">List</button>
+            </semantic-link-container>
+            <semantic-link-container uri=":ListCreation" target=_blank>
+              <button class="btn btn-default">List</button>
+            </semantic-link-container>
+            <semantic-link-container uri=":ListGroups" target=_blank>
+              <button class="btn btn-default">List</button>
+            </semantic-link-container>
+            <semantic-link-container uri=":ListOperations" target=_blank>
+              <button class="btn btn-default">List</button>
+            </semantic-link-container>
+            <semantic-link-container uri=":ListOutputDevice" target=_blank>
+              <button class="btn btn-default">List</button>
+            </semantic-link-container>
+            <semantic-link-container uri=":ListPersons" target=_blank>
+              <button class="btn btn-default">List</button>
+            </semantic-link-container>
+           
+
+            <p>NEU</p>
+            <semantic-link-container uri=":DigitalApp" target=_blank>
+                <button class="btn btn-default">Neu</button>
+              </semantic-link-container>
+              <semantic-link-container uri=":E65_Creation" target=_blank>
+                  <button class="btn btn-default">List</button>
+                </semantic-link-container>
+          </div>
+        </div>
+      </bs-col>
+      <!--
+                <bs-col sm=12 md=6>
+                  <div class="panel">
+                      
+                    <div class="panel-body">
+                        
+                      <h3>Resources</h3>
+                      <p>Take a look at these</p>
+                      <ul>
+                        <li><semantic-link iri="http://content.mpiwg-berlin.mpg.de/id/ismi/person/7437"></semantic-link></li>
+                        <li><semantic-link iri="http://content.mpiwg-berlin.mpg.de/id/ismi/text/161559"></semantic-link></li>
+                      </ul>
+                     
+                    </div>
+                    
+                  </div>
+                </bs-col>
+                 -->
+    </bs-row>
+  </bs-col>
+</div>
