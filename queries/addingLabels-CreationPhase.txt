@@ -1,0 +1,23 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+  <https://www.museum4punkt0.de/catalogue/ontology/Brainstorming> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/CreationPhase>; 
+    skos:prefLabel "Ideenfindung und -recherche";
+    rdfs:label "Ideenfindung und -recherche".
+<https://www.museum4punkt0.de/catalogue/ontology/Conception> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/CreationPhase>; 
+    skos:prefLabel "Konzeption";
+    rdfs:label "Konzeption".
+<https://www.museum4punkt0.de/catalogue/ontology/MaterialProduction> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/CreationPhase>; 
+    skos:prefLabel "Materialerzeugung und -beschaffung";
+    rdfs:label "Materialerzeugung und -beschaffung".  
+<https://www.museum4punkt0.de/catalogue/ontology/Realisation> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/CreationPhase>; 
+    skos:prefLabel "Umsetzung/Realisierung";
+    rdfs:label "Umsetzung/Realisierung".
+
+} WHERE {}
