@@ -1,0 +1,26 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+  <https://www.museum4punkt0.de/catalogue/ontology/Online> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse>; 
+    skos:prefLabel \"online\";
+    rdfs:label \"online\".
+<https://www.museum4punkt0.de/catalogue/ontology/Outside> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse>; 
+    skos:prefLabel \"außer Haus\";
+    rdfs:label \"außer Haus\".
+<https://www.museum4punkt0.de/catalogue/ontology/PermanentExhibition> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse>; 
+    skos:prefLabel \"Dauerausstellung\";
+    rdfs:label \"Daueraustellung\".  
+<https://www.museum4punkt0.de/catalogue/ontology/TemporaryExhibition> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse>; 
+    skos:prefLabel \"Sonderausstellung\";
+    rdfs:label \"Sonderausstellung\". 
+  <https://www.museum4punkt0.de/catalogue/ontology/Walkthrough> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/AreaOfUse>; 
+    skos:prefLabel \"Weg durch das Museum\";
+    rdfs:label \"Weg durch das Museum\". 
+} WHERE {}

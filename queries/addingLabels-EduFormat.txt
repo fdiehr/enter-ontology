@@ -1,0 +1,26 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+  <https://www.museum4punkt0.de/catalogue/ontology/ImmersiveFormat> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/EducationFormat>; 
+    skos:prefLabel "Immersives Format";
+    rdfs:label "Immersives Format".
+<https://www.museum4punkt0.de/catalogue/ontology/NarrativeFormat> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/EducationFormat>; 
+    skos:prefLabel "Narration und Storytelling";
+    rdfs:label "Narration und Storytelling".
+<https://www.museum4punkt0.de/catalogue/ontology/ParticipativeFormat> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/EducationFormat>; 
+    skos:prefLabel "Partizipativer Ansatz";
+    rdfs:label "Partizipativer Ansatz".  
+<https://www.museum4punkt0.de/catalogue/ontology/PlayfulFormat> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/EducationFormat>; 
+    skos:prefLabel "Spielerische Interaktion";
+    rdfs:label "Spielerische Interaktion".
+<https://www.museum4punkt0.de/catalogue/ontology/spatiallyRelated> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/EducationFormat>; 
+    skos:prefLabel "mit Raumbezug";
+    rdfs:label "mit Raumbezug".
+} WHERE {}

@@ -1,0 +1,19 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+  <https://www.museum4punkt0.de/catalogue/ontology/LowFidelityPrototype> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel>; 
+    skos:prefLabel \"Low Fidelity Prototype\";
+    rdfs:label \"Low Fidelity Prototype\".
+<https://www.museum4punkt0.de/catalogue/ontology/HighFidelityPrototype> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel>; 
+    skos:prefLabel \"High Fidelity Prototype\";
+    rdfs:label \"High Fidelity Prototype\".
+<https://www.museum4punkt0.de/catalogue/ontology/Product> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/MaturityLevel>; 
+    skos:prefLabel \"ausgereiftes Produkt\";
+    rdfs:label \"ausgereiftes Produkt\".  
+
+} WHERE {}

@@ -1,0 +1,23 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX m4p0: <https://www.museum4punkt0.de/catalogue/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+  <https://www.museum4punkt0.de/catalogue/ontology/OperatingSystem> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/SoftwareType>; 
+    skos:prefLabel "Betriebssystem";
+    rdfs:label "Betriebssystem".
+<https://www.museum4punkt0.de/catalogue/ontology/UserApplication> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/SoftwareType>; 
+    skos:prefLabel "Anwendersoftware";
+    rdfs:label "Anwendersoftware".
+<https://www.museum4punkt0.de/catalogue/ontology/Webbrowser> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/SoftwareType>; 
+    skos:prefLabel "Webbrowser";
+    rdfs:label "Webbrowser".  
+<https://www.museum4punkt0.de/catalogue/ontology/Other> a skos:Concept; 
+    skos:inScheme <https://www.museum4punkt0.de/catalogue/ontology/SoftwareType>; 
+    skos:prefLabel "Andere";
+    rdfs:label "Andere".
+
+} WHERE {}
