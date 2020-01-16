@@ -717,7 +717,7 @@ Stellt euch vor, ihr müsstet eine Stellenausschreibung aufsetzten. So in der Ar
 
     <owl:ObjectProperty rdf:about="https://www.museum4punkt0.de/catalogue/ontology/refersToMuseumObject">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
-        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdfs:range rdf:resource="https://www.museum4punkt0.de/catalogue/ontology/MuseumObject"/>
         <rdfs:comment xml:lang="de">4.6 digitalisierte Objekte/Materialen. Welche Materialen/Medien/Objekte wurden für die Anwendung digitalisiert? z.B. Dampfmaschine, Foto, Film, Textdokumente, etc.</rdfs:comment>
     </owl:ObjectProperty>
