@@ -12,16 +12,29 @@
      xmlns:m4p0="https://www.museum4punkt0.de/catalogue/ontology/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:crmdig="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#"
+     xmlns:crmdig="http://www.ics.forth.gr/isl/CRMdig/"
      xmlns:schema="http://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://www.museum4punkt0.de/catalogue/ontology/">
         <rdfs:comment xml:lang="en">This is the ontology for the &apos;catalogue of digital applications and objects for museum education and research&apos; of museum4punkt0. 
 
-The ontology describes and represents digital applications and digital objects that were created during the project museum4punkt0. The descibed applications are used for purpose of museum education and are also subject to museum research efforts. Central aspects of the ontology are the use of (digital) tools and methods to create and research the applications and their effect on the user. It also contextualises digital representations of museum objects used in the applications.
-This ontology may also be of interest to other cultural (heritage) institutions which use digital applications for the education of their audience.
+The ontology describes and represents digital applications and digital objects 
+that were created during the project museum4punkt0. The described applications 
+are used for purpose of museum education and are also subject to museum research efforts. 
+Central aspects of the ontology are the use of (digital) tools and methods to create and research 
+the applications and their effect on the user. It also contextualises digital representations of 
+museum objects used in the applications.
+This ontology may also be of interest to other cultural (heritage) institutions 
+which use digital applications for the education of their audience.
 
-The project museum4punkt0 is funded by the Federal Government Commissioner for Culture and the Media in accordance with a resolution issued by the German Bundestag (Parliament of the Federal Republic of Germany).
+This ontology is part of the project museum4punkt0 -
+Digital Strategies for the Museum of the Future, sub-project &quot;Zentrale wissenschaftliche Projektsteuerung&quot;. 
+Further information: www.museum4punkt0.de/en/
+
+
+The project museum4punkt0 is funded by the Federal Government Commissioner
+for Culture and the Media in accordance with a resolution issued by the German
+Bundestag (Parliament of the Federal Republic of Germany).
 
 CC-BY 4.0 International License 
 Franziska Diehr for museum4punkt0</rdfs:comment>
@@ -2359,15 +2372,15 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/QualityOfGeometryRes">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.museum4punkt0.de/catalogue/ontology/RDFGraph -->
 
-     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/RDFGraph">
+    <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/RDFGraph">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Realisation -->
