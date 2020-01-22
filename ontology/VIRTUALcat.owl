@@ -316,7 +316,7 @@ Franziska Diehr for museum4punkt0</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://www.europeana.eu/schemas/edm/dataProvider">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/provenance"/>
-        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/rdfs/3D-COFORM_CRMdig.rdfs#D1.Digital_Object"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
     </owl:ObjectProperty>
     
@@ -2359,7 +2359,15 @@ https://en.wikipedia.org/wiki/Output_device</rdfs:comment>
     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/QualityOfGeometryRes">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://www.museum4punkt0.de/catalogue/ontology/RDFGraph -->
+
+     <owl:Class rdf:about="https://www.museum4punkt0.de/catalogue/ontology/RDFGraph">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+    </owl:Class>
+
 
 
     <!-- https://www.museum4punkt0.de/catalogue/ontology/Realisation -->
