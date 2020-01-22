@@ -11,12 +11,12 @@ museum objects used in the applications.
 This ontology may also be of interest to other cultural (heritage) institutions 
 which use digital applications for the education of their audience.
 
-##Project
+## Project
 This ontology is part of the project museum4punkt0 -
 Digital Strategies for the Museum of the Future, sub-project "Zentrale wissenschaftliche Projektsteuerung". 
 Further information: www.museum4punkt0.de/en/
 
-##Funding
+## Funding
 The project museum4punkt0 is funded by the Federal Government Commissioner
 for Culture and the Media in accordance with a resolution issued by the German
 Bundestag (Parliament of the Federal Republic of Germany).
