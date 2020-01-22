@@ -11,6 +11,9 @@ museum objects used in the applications.
 This ontology may also be of interest to other cultural (heritage) institutions 
 which use digital applications for the education of their audience.
 
+The ontology is used as basis for the data model in the app "entermuseum4punkt0", which refers to: 
+https://github.com/fdiehr/entermuseum4punkt0
+
 ## Project
 This ontology is part of the project museum4punkt0 -
 Digital Strategies for the Museum of the Future, sub-project "Zentrale wissenschaftliche Projektsteuerung". 
@@ -21,10 +24,13 @@ The project museum4punkt0 is funded by the Federal Government Commissioner
 for Culture and the Media in accordance with a resolution issued by the German
 Bundestag (Parliament of the Federal Republic of Germany).
 
+## Credits 
+<a href="https://www.preussischer-kulturbesitz.de/"> Stiftung Preußischer Kulturbesitz</a>, <a href="https://www.museum4punkt0.de/en"> museum4punkt0</a>, Franziska Diehr, 2020
+
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
 </a><br />This work is licensed under a 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-Franziska Diehr for museum4punkt0, 2020
+
